@@ -8,10 +8,16 @@ Lady Whistledown needs help managing the social registry for the season's ball. 
 
 ## Project Structure
 
-This project has three main folders:
+This project has four main folders:
+
+### 00-coach-manual
+Contains coaching materials and reference documents. This is optional - students can work through the project independently, but if a coach is guiding the sessions, this folder provides:
+- **Whistledown's Ball Registry.md**: Complete coach manual with session-by-session guidance, timing, and teaching notes
+- **Whistledown's Ball Registry Expansion.md**: Coach notes for Phase 4 (expansion pack sessions)
+- **Java Cheat Sheet.md**: One-page printable reference of Java fundamentals covered in this warmup
 
 ### 01-clean-start
-Contains starter files with TODO comments and hints. All code compiles but logic needs to be implemented. Use this as a reference or to start fresh.
+Contains starter files with TODO comments and hints. All code compiles but logic needs to be implemented. Use this as a reference or to start fresh. Don't modify anything in this folder.
 
 ### 02-assignments
 **This is your working directory.** Make all your edits here. Starts identical to clean-start. This folder is marked as the Sources Root in IntelliJ.
