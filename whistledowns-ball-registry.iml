@@ -3,24 +3,24 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-safety/session-01-sandbox" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-safety/session-02-strings-null" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-safety/session-03-decisions-loops" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-safety/session-04-intellij-start" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-safety/session-05-eligibility-method" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-02-ton/session-06-socialite-class" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-02-ton/session-07-etiquette-rules" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-02-ton/session-08-ball" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-03-test-engine/session-09-mini-asserts" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-03-test-engine/session-10-junit-preview" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-expansion-pack/session-11-map-reputation" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-expansion-pack/session-12-failure-reasons" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-expansion-pack/session-13-test-run-harness" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-expansion-pack/session-14-structured-result" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-expansion-pack/session-15-csv-ledger" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-expansion-pack/session-16-parameterized-cases" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-expansion-pack/session-17-human-readable-reports" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-expansion-pack/session-18-season-statistics" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-first-season/session-01-sandbox" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-first-season/session-02-strings-null" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-first-season/session-03-decisions-loops" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-first-season/session-04-intellij-start" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-first-season/session-05-eligibility-method" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-02-the-ton/session-06-socialite-class" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-02-the-ton/session-07-etiquette-rules" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-02-the-ton/session-08-ball" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-03-whistledowns-verdict/session-09-mini-asserts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-03-whistledowns-verdict/session-10-junit-preview" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-season-of-refinement/session-11-map-reputation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-season-of-refinement/session-12-failure-reasons" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-season-of-refinement/session-13-test-run-harness" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-season-of-refinement/session-14-structured-result" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-season-of-refinement/session-15-csv-ledger" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-season-of-refinement/session-16-parameterized-cases" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-season-of-refinement/session-17-human-readable-reports" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-04-season-of-refinement/session-18-season-statistics" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

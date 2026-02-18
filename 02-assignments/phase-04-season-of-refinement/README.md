@@ -1,4 +1,4 @@
-# Phase 4 – Expansion Pack
+# Phase 4 – Season of Refinement
 
 Welcome to the optional expansion sessions! These sessions are completely optional but offer great fun and valuable practice with Java fundamentals and test automation patterns.
 
