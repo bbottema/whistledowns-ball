@@ -1,0 +1,557 @@
+## Page 1
+
+# Java Warm-up Fridays
+
+## Bridgerton Edition
+
+Course: 14–16 April 2026
+
+This is not about becoming a developer. This is about walking into that classroom calm, composed, and slightly ahead.
+
+We are building one evolving mini project:
+
+*   The Bridgerton Social Registry — Lady Whistledown needs help determining who may attend the ball.
+
+<footer>Java Warm-up Fridays • Course 14–16 April 2026</footer>
+
+---
+
+
+## Page 2
+
+# Global Plan (Coach Notes)
+
+*   Fridays only, 30–45 minutes max.
+*   Always end on green (runs, prints, or a controlled failure you expected).
+*   If stress rises: shrink scope immediately.
+*   Let her type; you guide.
+*   Errors are neutral feedback, not judgment.
+*   We deliberately touch scary concepts early in a safe place (scratch file / JShell vibe), so they feel familiar later.
+
+## Tooling
+
+*   Use an IntelliJ Java scratch file as the default safe sandbox.
+*   Fallback: terminal jshell.
+*   No Maven/Gradle during warm-up.
+
+<footer>Java Warm-up Fridays • Course 14–16 April 2026</footer>
+
+---
+
+
+## Page 3
+
+# Timeline
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Focus</th>
+      <th>Concept</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jan 30</td>
+      <td>Sandbox Java</td>
+      <td>variables + prints + controlled errors</td>
+    </tr>
+    <tr>
+      <td>Feb 6</td>
+      <td>Expected vs actual</td>
+      <td>String comparisons + null-safety</td>
+    </tr>
+    <tr>
+      <td>Feb 13</td>
+      <td>Decisions & loops</td>
+      <td>if/else + loops + arrays/lists intro</td>
+    </tr>
+    <tr>
+      <td>Feb 20</td>
+      <td>IntelliJ comfort</td>
+      <td>main method + compile errors</td>
+    </tr>
+    <tr>
+      <td>Feb 27</td>
+      <td>First eligibility function</td>
+      <td>methods + return values</td>
+    </tr>
+    <tr>
+      <td>Mar 6</td>
+      <td>Socialite object</td>
+      <td>classes + constructors</td>
+    </tr>
+    <tr>
+      <td>Mar 13</td>
+      <td>Etiquette rules</td>
+      <td>interface + implementations</td>
+    </tr>
+    <tr>
+      <td>Mar 20</td>
+      <td>The Ball</td>
+      <td>collections + orchestration class</td>
+    </tr>
+    <tr>
+      <td>Apr 3</td>
+      <td>Mini test engine</td>
+      <td>assertions + exceptions</td>
+    </tr>
+    <tr>
+      <td>Apr 10</td>
+      <td>JUnit preview</td>
+      <td>@Test + assertions</td>
+    </tr>
+  </tbody>
+</table>
+
+March is optional (travel). Skip with zero guilt.
+
+<footer>Java Warm-up Fridays • Course 14–16 April 2026</footer>
+
+---
+
+
+## Page 4
+
+# Phase 1 – Safety & Familiarity
+
+## The Ball Eligibility Check (No Objects Yet)
+
+Goal: Make the concepts feel safe before they become "real code". We intentionally expose null handling, throwing exceptions, reading errors, loops, and tiny methods in the sandbox.
+
+<footer>Java Warm-up Fridays • Course 14–16 April 2026</footer>
+
+---
+
+
+## Page 5
+
+# Session 1 – Sandbox Java (scratch file / JShell vibe)
+
+**Short summary:** Run simple expressions, print output, and intentionally trigger safe errors.
+
+## 1) Variables + print
+
+```java
+int age = 21;
+String family = "Bridgerton";
+boolean invited = true;
+
+System.out.println(age);
+System.out.println(family);
+System.out.println(invited);
+```
+
+## 2) A controlled runtime exception (safe exposure)
+
+```java
+throw new RuntimeException("Lady Whistledown disapproves.");
+```
+Coach prompt: "This is what a crash looks like. It's not scary. It's information."
+
+## 3) A controlled bad input error (optional)
+
+```java
+Integer.parseInt("not-a-number");
+```
+Coach prompt: "Errors are normal. Tests cause errors on purpose when something is wrong."
+
+**Wrap-up win:** She ran code, saw output, and saw a controlled exception without panic.
+
+# Session 2 – Expected vs Actual (Strings + null safety)
+
+**Short summary:** String comparisons, common string ops, and basic null-safety.
+
+## 1) equals vs ==
+
+```java
+String expected = "OK";
+String actual = "OK";
+
+System.out.println(expected.equals(actual)); // true
+System.out.println(expected == actual); // don't use for text
+```
+
+## 2) Common string checks
+
+```java
+String msg = "Status: OK";
+
+System.out.println(msg.contains("OK"));
+System.out.println(msg.startsWith("Status"));
+System.out.println(msg.replace("Status: ", ""));
+System.out.println(msg.toLowerCase());
+System.out.println(" Status: OK ".trim());
+```
+
+## 3) Null safety (gentle)
+
+```java
+String familyName = null;
+
+// safe pattern:
+boolean respectable = familyName != null && !familyName.isBlank();
+System.out.println(respectable);
+```
+
+## 4) Optional controlled exception: fail fast check
+
+```java
+String familyName2 = null;
+if (familyName2 == null) {
+    throw new IllegalArgumentException("Family name is required.");
+}
+```
+
+Java Warm-up Fridays • Course 14–16 April 2026
+
+---
+
+
+## Page 6
+
+Wrap-up win: equals for text feels normal, and null-safe checks feel routine.
+
+# Session 3 – Decisions & loops (rules + multiple cases)
+
+Short summary: if/else and loops to express rules and evaluate multiple cases.
+
+## 1) One rule
+
+```java
+int age2 = 17;
+
+if (age2 >= 18) {
+    System.out.println("Eligible");
+} else {
+    System.out.println("Not eligible");
+}
+```
+
+## 2) Multiple test cases (array)
+
+```java
+int[] ages = { 16, 17, 18, 21 };
+
+for (int a : ages) {
+    System.out.println(a + " -> " + (a >= 18));
+}
+```
+
+## 3) Multiple test cases (list) — light exposure
+
+```java
+import java.util.List;
+
+List<String> families = List.of("Bridgerton", "", "Featherington");
+
+for (String f : families) {
+    boolean respectable = f != null && !f.isBlank();
+    System.out.println("\"" + f + "\" -> " + respectable);
+}
+```
+
+Wrap-up win: She can loop over multiple test cases and interpret output.
+
+<footer>Java Warm-up Fridays • Course 14–16 April 2026</footer>
+
+---
+
+
+## Page 7
+
+# Session 4 – IntelliJ as a helper (main + compile errors)
+
+**Short summary:** Get comfortable running a file and reading IntelliJ feedback.
+
+## 1) "Start button" file
+
+```java
+public class WarmUp {
+    public static void main(String[] args) {
+        System.out.println("Hello tester");
+    }
+}
+```
+
+Coach rule: Do not explain static/args. Say: "This is just the start button."
+
+## 2) Controlled compile error practice
+
+*   Remove a semicolon.
+*   Observe the red underline.
+*   Use Alt+Enter and read the suggestion.
+
+**Wrap-up win:** Errors feel like guidance, not judgment.
+
+# Session 5 – First eligibility function (methods + return)
+
+**Short summary:** Write a method encoding Lady Whistledown's eligibility rule.
+
+```java
+static boolean isEligible(int age, String familyName) {
+    if (age < 18) return false;
+    if (familyName == null || familyName.isBlank()) return false;
+    return true;
+}
+```
+
+**Try:**
+
+```java
+System.out.println(isEligible(21, "Bridgerton"));
+System.out.println(isEligible(16, "Featherington"));
+System.out.println(isEligible(21, ""));
+System.out.println(isEligible(21, null));
+```
+
+**Wrap-up win:** She predicts outputs before running.
+
+Java Warm-up Fridays • Course 14–16 April 2026
+
+---
+
+
+## Page 8
+
+# Phase 2 – Enter the Ton (Objects + Rules)
+
+Goal: Same registry logic, now structured like real Java. We introduce a Socialite, then etiquette rules, then orchestration with a Ball.
+
+Java Warm-up Fridays • Course 14–16 April 2026
+
+---
+
+
+## Page 9
+
+# Session 6 – Socialite class (constructors + methods)
+
+**Short summary:** Create a Socialite object and move logic from loose parameters into structured data.
+
+```java
+class Socialite {
+    String name;
+    int age;
+    String familyName;
+
+    Socialite(String name, int age, String familyName) {
+        this.name = name;
+        this.age = age;
+        this.familyName = familyName;
+    }
+
+    boolean isOfAge() {
+        return age >= 18;
+    }
+
+    boolean hasRespectableFamily() {
+        return familyName != null && !familyName.isBlank();
+    }
+}
+```
+
+**Create characters:**
+
+```java
+Socialite daphne = new Socialite("Daphne", 21, "Bridgerton");
+Socialite penelope = new Socialite("Penelope", 16, "Featherington");
+Socialite simon = new Socialite("Simon", 28, "Basset"); // Duke of Hastings
+```
+
+**Run checks:**
+
+```java
+System.out.println(daphne.isOfAge());
+System.out.println(penelope.isOfAge());
+System.out.println(simon.hasRespectableFamily());
+```
+
+# Session 7 – Etiquette rules (interfaces + implementations)
+
+**Short summary:** Introduce one interface and two rule implementations.
+
+```java
+interface EtiquetteRule {
+    boolean passes(Socialite s);
+    String name();
+}
+```
+
+**Rule 1:**
+
+```java
+class AgeRule implements EtiquetteRule {
+    public boolean passes(Socialite s) { return s.age >= 18; }
+    public String name() { return "AgeRule"; }
+}
+```
+
+**Rule 2:**
+
+```java
+class FamilyNameRule implements EtiquetteRule {
+    public boolean passes(Socialite s) {
+        return s.familyName != null && !s.familyName.isBlank();
+    }
+    public String name() { return "FamilyNameRule"; }
+}
+```
+
+**Polymorphic use:**
+
+Java Warm-up Fridays • Course 14–16 April 2026
+
+---
+
+
+## Page 10
+
+```java
+import java.util.List;
+
+List<EtiquetteRule> rules = List.of(new AgeRule(), new FamilyNameRule());
+Socialite simon2 = new Socialite("Simon", 28, "Basset");
+
+for (EtiquetteRule rule : rules) {
+    System.out.println(rule.name() + " -> " + rule.passes(simon2));
+}
+```
+
+Coach note: interface = contract, implementations = concrete rules, list+loop = apply multiple rules.
+
+Java Warm-up Fridays • Course 14–16 April 2026
+
+---
+
+
+## Page 11
+
+# Session 8 – The Ball class (orchestration + collections)
+
+**Short summary:** Introduce a Ball that applies rules to many guests and prints a registry.
+
+```java
+import java.util.List;
+
+class Ball {
+    List<EtiquetteRule> rules;
+
+    Ball(List<EtiquetteRule> rules) {
+        this.rules = rules;
+    }
+
+    boolean mayAttend(Socialite s) {
+        for (EtiquetteRule rule : rules) {
+            if (!rule.passes(s)) return false;
+        }
+        return true;
+    }
+
+    void printRegistry(List<Socialite> guests) {
+        for (Socialite g : guests) {
+            System.out.println(g.name + " -> " + (mayAttend(g) ? "INVITED" : "NOT INVITED"));
+        }
+    }
+}
+```
+
+**Use it:**
+
+```java
+List<EtiquetteRule> rules2 = List.of(new AgeRule(), new FamilyNameRule());
+Ball ball = new Ball(rules2);
+
+Socialite daphne2 = new Socialite("Daphne", 21, "Bridgerton");
+Socialite penelope2 = new Socialite("Penelope", 16, "Featherington");
+Socialite simon3 = new Socialite("Simon", 28, "Basset");
+
+List<Socialite> guests = List.of(daphne2, penelope2, simon3);
+
+ball.printRegistry(guests);
+```
+Expected output: Daphne -> INVITED, Penelope -> NOT INVITED, Simon -> INVITED.
+
+<footer>Java Warm-up Fridays • Course 14–16 April 2026</footer>
+
+---
+
+
+## Page 12
+
+# Phase 3 – Lady Whistledown's Test Engine
+
+Goal: Show how tests fail loudly in a controlled, readable way. The Ball becomes the thing we test.
+
+Java Warm-up Fridays • Course 14–16 April 2026
+
+---
+
+
+## Page 13
+
+# Session 9 – Mini asserts + controlled failures
+
+**Short summary:** Write tiny assertions and use them to test the Ball registry.
+
+```java
+import java.util.Objects;
+
+class MiniAsserts {
+    static void assertTrue(boolean condition, String message) {
+        if (!condition) throw new AssertionError(message);
+    }
+
+    static void assertEquals(Object expected, Object actual) {
+        if (!Objects.equals(expected, actual)) {
+            throw new AssertionError("Expected [" + expected + "] but got [" + actual + "]");
+        }
+    }
+}
+```
+
+**Use:**
+
+```java
+Ball ball2 = new Ball(List.of(new AgeRule(), new FamilyNameRule()));
+
+Socialite simon4 = new Socialite("Simon", 28, "Basset");
+Socialite penelope3 = new Socialite("Penelope", 16, "Featherington");
+
+MiniAsserts.assertTrue(ball2.mayAttend(simon4), "Simon should be invited");
+MiniAsserts.assertTrue(!ball2.mayAttend(penelope3), "Penelope should not be invited");
+System.out.println("All checks passed");
+```
+Deliberate fail practice: flip one condition once, run, read the error calmly, then fix it back.
+
+# Session 10 – JUnit preview + calm start
+
+**Short summary:** Preview the shape of JUnit tests. No deep theory.
+
+```java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
+
+class BallTest {
+
+    @Test
+    void dukeIsInvited() {
+        Ball ball = new Ball(List.of(new AgeRule(), new FamilyNameRule()));
+        Socialite simon = new Socialite("Simon", 28, "Basset");
+        assertTrue(ball.mayAttend(simon));
+    }
+}
+```
+Minimal explanation: @Test marks a runnable test method; JUnit runs it and reports failures; assertions are built-in.
+
+**Night-before checklist:**
+*   IntelliJ opens quickly.
+*   JDK is configured.
+*   Warm-up project runs.
+*   Charger + mouse packed.
+
+<footer>Java Warm-up Fridays • Course 14–16 April 2026</footer>
+
+---

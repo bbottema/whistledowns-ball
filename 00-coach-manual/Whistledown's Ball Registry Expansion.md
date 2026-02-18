@@ -1,0 +1,263 @@
+## Page 1
+
+# Bridgerton Social Registry
+
+## Expansion Pack
+
+**When to use:** Open this only after Phase 3 of the main document is completed.
+
+**Purpose:** extend the same mini-project with automation-shaped patterns (data-driven rules, diagnostics, report-like output).
+
+**Coach rule:** keep it procedural — add one thing, run it, observe output, stop on a win.
+
+<footer>Bridgerton Social Registry • Expansion Pack</footer>
+
+---
+
+
+## Page 2
+
+# Before you start
+
+You already have these from the main document:
+
+*   `Socialite` class
+*   `EtiquetteRule` interface with `passes(Socialite)` and `name()`
+*   `AgeRule`, `FamilyNameRule`
+*   `Ball` with `mayAttend(...)` and `printRegistry(...)`
+*   MiniAsserts OR a JUnit preview
+
+We will add features; not rewrite the project.
+
+<footer>Bridgerton Social Registry • Expansion Pack</footer>
+
+---
+
+
+## Page 3
+
+# Upgrade 1 — Data-driven Reputation (Map)
+
+Functional goal: make one guest fail on reputation (not on age). This introduces Map/dictionary and makes the project feel more like real automation.
+
+## 1) Add reputation test data
+
+Create a Map that behaves like a test-data table: given a family name (key), return a reputation score (value).
+
+```java
+import java.util.Map;
+
+Map<String, Integer> reputations = Map.of(
+    "Bridgerton", 9,
+    "Featherington", 6,
+    "Basset", 10,
+    "Sharpe", 2
+);
+```
+Coach notes: Map = key → value. `get(key)` returns a value or `null` if unknown.
+
+## 2) Prove the Map works
+
+Do a couple of lookups so Map feels safe before we use it in a rule.
+
+```java
+System.out.println(reputations.get("Basset")); // 10
+System.out.println(reputations.get("Sharpe")); // 2
+System.out.println(reputations.get("Unknown")); // null
+```
+Coach notes: don't explain generics deeply. One-liner: keys are text, values are numbers.
+
+## 3) Add a guest who fails on reputation
+
+Add Theo Sharpe: of age, has a family name, but fails because reputation is too low.
+
+```java
+Socialite theo = new Socialite("Theo", 21, "Sharpe");
+```
+Coach notes: Penelope already fails on age. Theo is the clean reputation-only failing case.
+
+## 4) Add ReputationRule
+
+Create a new EtiquetteRule that uses the Map as its data source.
+
+```java
+import java.util.Map;
+
+class ReputationRule implements EtiquetteRule {
+
+    private final Map<String, Integer> reputationByFamily;
+
+    ReputationRule(Map<String, Integer> reputationByFamily) {
+        this.reputationByFamily = reputationByFamily;
+    }
+
+    public boolean passes(Socialite s) {
+        Integer score = reputationByFamily.get(s.familyName);
+        if (score == null) return false; // unknown family -> FAIL
+        return score >= 7; // threshold for INVITED
+    }
+
+    public String name() {
+        return "ReputationRule";
+    }
+}
+```
+
+<footer>Bridgerton Social Registry • Expansion Pack</footer>
+
+---
+
+
+## Page 4
+
+Automation framing: this is a data-driven validator (rule uses a test-data table).
+
+**5) Add the rule to the Ball configuration**
+
+We don't change Ball yet. We only change which rules it runs.
+
+```java
+import java.util.List;
+
+Ball ball = new Ball(List.of(
+    new AgeRule(),
+    new FamilyNameRule(),
+    new ReputationRule(reputations)
+));
+```
+
+Run the registry and confirm Theo fails while Simon still passes.
+
+<footer>Bridgerton Social Registry • Expansion Pack</footer>
+
+---
+
+
+## Page 5
+
+# Upgrade 2 — Explain WHY someone is not invited
+
+Functional goal: produce diagnostic output like a test report. Tests shouldn't just fail; they should tell you what failed.
+
+## 6) Add failureReasons(...) to Ball
+
+We keep `mayAttend(...)` (boolean) but add a second method that collects all failed rules.
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+List<String> failureReasons(Socialite s) {
+    List<String> failures = new ArrayList<>();
+
+    for (EtiquetteRule rule : rules) {
+        if (!rule.passes(s)) {
+            failures.add(rule.name());
+        }
+    }
+
+    return failures;
+}
+```
+Coach notes: this is the classic automation pattern: accumulate failures, then report.
+
+## 7) Upgrade printRegistry(...) to include reasons
+
+Change the output so it prints PASS/FAIL and, on FAIL, prints the reasons list.
+
+```java
+void printRegistry(List<Socialite> guests) {
+    for (Socialite g : guests) {
+
+        List<String> failures = failureReasons(g);
+
+        if (failures.isEmpty()) {
+            System.out.println(g.name + " -> INVITED");
+        } else {
+            System.out.println(g.name + " -> NOT INVITED (failed: " + failures + ")");
+        }
+    }
+}
+```
+Expected: Penelope fails on AgeRule, Theo fails on ReputationRule.
+
+## 8) Optional polish: human-friendly reason text
+
+If she enjoys it, change rule `name()` values to read like assertion messages.
+
+```java
+// Example:
+public String name() { return "Reputation too low"; }
+
+// Example:
+public String name() { return "Too young"; }
+```
+Coach notes: keep this optional. Stop after a win.
+
+<footer>Bridgerton Social Registry • Expansion Pack</footer>
+
+---
+
+
+## Page 6
+
+# Upgrade 3 — Tiny automation-style test run harness (optional)
+
+Functional goal: one-click run that sets up data, runs checks, asserts outcomes, and prints a PASS message — like a mini test suite.
+
+## 9) Add RegistryTestRun (no JUnit)
+
+This is an automation-shaped script: Arrange → Act → Assert → Report.
+
+```java
+import java.util.List;
+import java.util.Map;
+
+public class RegistryTestRun {
+    public static void main(String[] args) {
+
+        // Arrange (test data)
+        Map<String, Integer> reputations = Map.of(
+            "Bridgerton", 9,
+            "Featherington", 6,
+            "Basset", 10,
+            "Sharpe", 2
+        );
+
+        Ball ball = new Ball(List.of(
+            new AgeRule(),
+            new FamilyNameRule(),
+            new ReputationRule(reputations)
+        ));
+
+        Socialite simon = new Socialite("Simon", 28, "Basset");
+        Socialite theo = new Socialite("Theo", 21, "Sharpe");
+
+        // Assert (expected outcomes)
+        MiniAsserts.assertTrue(ball.mayAttend(simon), "Simon should be invited");
+        MiniAsserts.assertTrue(!ball.mayAttend(theo), "Theo should fail on reputation");
+
+        // Report
+        System.out.println("Registry checks: PASS");
+    }
+}
+```
+
+Coach notes: if she's tired, skip this entire upgrade. It's a bonus.
+
+<footer>Bridgerton Social Registry • Expansion Pack</footer>
+
+---
+
+
+## Page 7
+
+# Coach checklist (quick run order)
+
+1.  Upgrade 1: Add Map → prove lookups → add Theo → add ReputationRule → add rule to Ball → run registry.
+2.  Upgrade 2: Add failureReasons(...) → upgrade printRegistry(...) → run again and read diagnostics.
+3.  Upgrade 3 (optional): Add RegistryTestRun → run → see PASS output.
+
+Rule: stop immediately after a clear win. Don't chase perfection.
+
+<footer>Bridgerton Social Registry • Expansion Pack</footer>
