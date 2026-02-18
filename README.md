@@ -6,6 +6,30 @@ A beginner-friendly Java warmup project for testers preparing for a Java testing
 
 Lady Whistledown needs help managing the social registry for the season's ball. You'll build a system that determines who may attend based on various etiquette rules. This project introduces Java fundamentals in a calm, structured way.
 
+## Getting Started
+
+### Step 1: Install IntelliJ IDEA
+
+Download and install **IntelliJ IDEA Community Edition** (it's free). When you first open it, IntelliJ will offer to download Java for you if you don't have it. Let it do that.
+
+### Step 2: Open This Project
+
+1. Launch IntelliJ
+2. Click **Open**
+3. Navigate to this project folder and click **Open**
+4. If prompted to trust the project, click **Trust Project**
+
+### Step 3: Install JShell Console Plugin
+
+Sessions 1-3 use JShell for interactive practice.
+
+1. Go to **File → Settings → Plugins** (or **IntelliJ IDEA → Preferences → Plugins** on Mac)
+2. Click **Marketplace**
+3. Search for **"JShell Console"**
+4. Click **Install** and restart when prompted
+
+You can now access JShell via **Tools → JShell Console...**
+
 ## Project Structure
 
 This project has four main folders:
@@ -33,27 +57,6 @@ Each of the three folders contains identical phase structure:
 - **Phase 02 – Enter the Ton** (Sessions 6-8): Classes, interfaces, and orchestration
 - **Phase 03 – Test Engine** (Sessions 9-10): Assertions and JUnit preview
 - **Phase 04 – Expansion Pack** (Sessions 11-13): Maps, diagnostics, and test harnesses
-
-## Setup: JShell Console Plugin
-
-**Important:** Sessions 1-3 use JShell for interactive Java experimentation. You need to install the JShell Console plugin first.
-
-### Installing JShell Console Plugin
-
-1. Open IntelliJ IDEA
-2. Go to **File → Settings** (or **IntelliJ IDEA → Preferences** on Mac)
-3. Navigate to **Plugins**
-4. Click **Marketplace** tab
-5. Search for **"JShell Console"**
-6. Click **Install** on the JShell Console plugin
-7. Restart IntelliJ when prompted
-
-### Opening JShell Console
-
-Once installed, open JShell via:
-- **Tools → JShell Console...**
-
-An empty console will appear where you can type Java code directly without needing a main method.
 
 ## How to Run a Session
 
@@ -91,6 +94,12 @@ When your code runs and produces the expected output, stop. You're done. Don't c
 ## Progress Tracking
 
 See `PROGRESS.md` for a checklist of all sessions. Mark them off as you complete them.
+
+## Technical Notes
+
+- Plain Java project (no build tools needed, everything is inside IntelliJ)
+- Each session folder is self-contained
+- No external libraries required
 
 ## Getting Help
 
