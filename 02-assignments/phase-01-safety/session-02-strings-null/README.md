@@ -1,4 +1,4 @@
-# Session 02 – Strings & Null Safety
+# Session 02 – Strings & Null Safety (JShell)
 
 ## Goal
 
@@ -13,8 +13,12 @@ Learn to compare strings correctly and handle null values safely.
 
 ## How to Run It
 
-1. Open `S02_StringsNull.java`
-2. Right-click and run it
+**This session uses JShell - an interactive Java console.**
+
+1. Open `S02_StringsNull.java` to see the code snippets
+2. Open JShell Console: **Tools → JShell Console...**
+3. Copy code snippets from the file (remove `//` and `TODO:`)
+4. Paste them into JShell and observe results
 
 ## Expected Output
 
@@ -30,6 +34,10 @@ Learn to compare strings correctly and handle null values safely.
 
 **Using `==` for strings**
 - Use `.equals()` instead
+
+**Variable already exists error**
+- JShell remembers previous variables
+- Type `/reset` to start fresh
 
 ## Coach Notes
 

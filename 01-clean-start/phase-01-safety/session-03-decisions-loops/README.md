@@ -1,4 +1,4 @@
-# Session 03 – Decisions & Loops
+# Session 03 – Decisions & Loops (JShell)
 
 ## Goal
 
@@ -12,8 +12,13 @@ Use if/else statements and loops to evaluate multiple test cases.
 
 ## How to Run It
 
-1. Open `S03_DecisionsLoops.java`
-2. Right-click and run it
+**This session uses JShell - an interactive Java console.**
+
+1. Open `S03_DecisionsLoops.java` to see the code snippets
+2. Open JShell Console: **Tools → JShell Console...**
+3. Copy code snippets from the file (remove `//` and `TODO:`)
+4. For the List example, paste the import statement first
+5. Observe output for each snippet
 
 ## Expected Output
 
@@ -27,8 +32,12 @@ Use if/else statements and loops to evaluate multiple test cases.
 - For arrays: `for (int a : ages) { ... }`
 - For lists: `for (String f : families) { ... }`
 
-**Forgot import**
-- Add `import java.util.List;` at the top
+**Cannot find symbol List**
+- Add `import java.util.List;` in JShell before using List
+
+**Multi-line code in JShell**
+- JShell will show `...>` for continuation lines
+- Type the closing brace and press Enter to complete
 
 ## Coach Notes
 

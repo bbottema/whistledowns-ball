@@ -1,27 +1,24 @@
-import java.util.List;
+// Session 03 - Decisions & Loops (JShell)
+// Copy these snippets into the JShell Console (Tools -> JShell Console...)
 
-public class S03_DecisionsLoops {
-    public static void main(String[] args) {
+// TODO: One rule
+// int age = 17;
+// if (age >= 18) {
+//     System.out.println("Eligible");
+// } else {
+//     System.out.println("Not eligible");
+// }
 
-        // TODO: One rule
-        // int age = 17;
-        // if (age >= 18) {
-        //     System.out.println("Eligible");
-        // } else {
-        //     System.out.println("Not eligible");
-        // }
+// TODO: Multiple test cases (array)
+// int[] ages = { 16, 17, 18, 21 };
+// for (int a : ages) {
+//     System.out.println(a + " -> " + (a >= 18));
+// }
 
-        // TODO: Multiple test cases (array)
-        // int[] ages = { 16, 17, 18, 21 };
-        // for (int a : ages) {
-        //     System.out.println(a + " -> " + (a >= 18));
-        // }
-
-        // TODO: Multiple test cases (list)
-        // List<String> families = List.of("Bridgerton", "", "Featherington");
-        // for (String f : families) {
-        //     boolean respectable = f != null && !f.isBlank();
-        //     System.out.println("\"" + f + "\" -> " + respectable);
-        // }
-    }
-}
+// TODO: Multiple test cases (list) - requires import
+// import java.util.List;
+// List<String> families = List.of("Bridgerton", "", "Featherington");
+// for (String f : families) {
+//     boolean respectable = f != null && !f.isBlank();
+//     System.out.println("\"" + f + "\" -> " + respectable);
+// }

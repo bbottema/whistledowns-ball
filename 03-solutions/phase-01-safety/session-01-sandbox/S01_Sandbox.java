@@ -1,20 +1,19 @@
-public class S01_Sandbox {
-    public static void main(String[] args) {
+// Session 01 - JShell Sandbox
+// Copy these snippets into the JShell Console (Tools -> JShell Console...)
+// Type or paste them one at a time and observe the output
 
-        // Declare three variables
-        int age = 21;
-        String family = "Bridgerton";
-        boolean invited = true;
+// Declare three variables
+int age = 21;
+String family = "Bridgerton";
+boolean invited = true;
 
-        // Print each variable
-        System.out.println(age);
-        System.out.println(family);
-        System.out.println(invited);
+// Print each variable
+System.out.println(age);
+System.out.println(family);
+System.out.println(invited);
 
-        // Trigger a controlled exception
-        throw new RuntimeException("Lady Whistledown disapproves.");
+// Trigger a controlled exception (see what happens!)
+throw new RuntimeException("Lady Whistledown disapproves.");
 
-        // OPTIONAL: Uncomment to see a parsing error
-        // Integer.parseInt("not-a-number");
-    }
-}
+// OPTIONAL: Try this to see a parsing error
+// Integer.parseInt("not-a-number");

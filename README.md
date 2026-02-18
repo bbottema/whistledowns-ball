@@ -28,7 +28,39 @@ Each of the three folders contains identical phase structure:
 - **Phase 03 – Test Engine** (Sessions 9-10): Assertions and JUnit preview
 - **Phase 04 – Expansion Pack** (Sessions 11-13): Maps, diagnostics, and test harnesses
 
+## Setup: JShell Console Plugin
+
+**Important:** Sessions 1-3 use JShell for interactive Java experimentation. You need to install the JShell Console plugin first.
+
+### Installing JShell Console Plugin
+
+1. Open IntelliJ IDEA
+2. Go to **File → Settings** (or **IntelliJ IDEA → Preferences** on Mac)
+3. Navigate to **Plugins**
+4. Click **Marketplace** tab
+5. Search for **"JShell Console"**
+6. Click **Install** on the JShell Console plugin
+7. Restart IntelliJ when prompted
+
+### Opening JShell Console
+
+Once installed, open JShell via:
+- **Tools → JShell Console...**
+
+An empty console will appear where you can type Java code directly without needing a main method.
+
 ## How to Run a Session
+
+### Sessions 1-3 (JShell Interactive)
+
+1. Navigate to `02-assignments/phase-01-safety/session-XX/`
+2. Open the `.java` file in that session
+3. Read the session README.md for guidance
+4. Open JShell Console via **Tools → JShell Console...**
+5. Copy code snippets from the file and paste into JShell
+6. Experiment by modifying values and re-running code
+
+### Sessions 4+ (Regular Java Programs)
 
 1. Navigate to `02-assignments/phase-XX/session-YY/`
 2. Open the Java file(s) in that session
