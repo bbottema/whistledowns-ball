@@ -16,7 +16,10 @@ Rule of thumb:
 
 - `%s` for strings
 - `%d` for integers
-- `%-18s` means “left-align in a 18-char column”
+- `%-18s` means "left-align in an 18-character column"
+- `%18s` (no `-`) means "right-align in an 18-character column"
+
+The `-` controls alignment. Use left-align for text, right-align for numbers (it looks more professional).
 
 ## Start here
 

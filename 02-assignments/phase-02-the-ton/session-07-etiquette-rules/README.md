@@ -24,9 +24,11 @@ rule.passes(socialite)
 `S07_AgeRule` and `S07_FamilyNameRule` are two different checks.
 They’re different inside, but they *look the same from the outside*.
 
-### Polymorphism = “treat different checks the same way”
+### Polymorphism = "treat different checks the same way"
 
-That’s what lets us put different rule objects in a `List` and loop over them.
+That's what lets us put different rule objects in a `List` and loop over them.
+
+Test-analyst translation: imagine you have a checklist where every item has a "pass/fail" checkbox. Each check is different (some check age, some check names), but you can process them all the same way: go through the list, tick each box. That's polymorphism.
 
 ## Start here
 

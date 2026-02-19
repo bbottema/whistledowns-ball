@@ -22,7 +22,25 @@ CSV rows can be:
 - missing columns
 - having non-numeric ages
 
-Your job: don’t crash the whole run because of one bad row.
+Your job: don't crash the whole run because of one bad row.
+
+The safe parsing pattern (illustrative snippet — adjust names to match your code):
+
+```java
+String[] parts = line.split(",");
+if (parts.length < 3) {
+	continue; // skip incomplete rows
+}
+
+try {
+	int age = Integer.parseInt(parts[1].trim());
+	guests.add(new Socialite(parts[0], age, parts[2]));
+} catch (NumberFormatException e) {
+	// skip rows with bad age data
+}
+```
+
+This way, one bad row won't kill your entire test run.
 
 ## Start here
 
@@ -57,7 +75,12 @@ Eloise -> INVITED
 
 ### `FileNotFoundException`
 
-- Make sure `season-ledger.csv` is in the same folder (session folder) as the Java files.
+- Make sure `season-ledger.csv` exists in this session folder.
+- IntelliJ tip: your program reads files relative to the **Working directory**.
+  - Open **Run → Edit Configurations...**
+  - Select your `S15_Assignment` run config
+  - Check **Working directory**
+  - If needed, set it to the session folder so `season-ledger.csv` can be found
 
 ### `ArrayIndexOutOfBoundsException`
 

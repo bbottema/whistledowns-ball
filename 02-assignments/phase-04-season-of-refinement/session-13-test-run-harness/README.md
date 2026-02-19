@@ -10,7 +10,7 @@ By the end of this session you can:
 
 ## Concepts (quick read, then do the TODOs)
 
-### AAA is a readability superpower
+### AAA+R is a readability superpower
 
 Even without JUnit, you can structure your checks like tests:
 
@@ -18,6 +18,8 @@ Even without JUnit, you can structure your checks like tests:
 - **Act**: run the behaviour
 - **Assert**: compare expected vs actual
 - **Report**: print a summary
+
+In test automation, we add **Report** so humans (or CI systems) can see results at a glance. It's the difference between silent failures and useful feedback.
 
 ## Start here
 

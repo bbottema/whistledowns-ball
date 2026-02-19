@@ -20,8 +20,20 @@ Integer rep = reputations.get("Basset");
 
 ### `get(...)` can return `null`
 
-If the key doesn’t exist, `Map.get(...)` returns `null`.
-That’s not a crash by itself — it’s a signal that your data is missing.
+If the key doesn't exist, `Map.get(...)` returns `null`.
+That's not a crash by itself — it's a signal that your data is missing.
+
+The safe pattern for handling unknown keys:
+
+```java
+Integer rep = reputations.get(familyName);
+if (rep == null) {
+    return false; // unknown family = not eligible
+}
+return rep >= threshold;
+```
+
+Or as a one-liner: `return rep != null && rep >= threshold;`
 
 ### Data-driven rule
 

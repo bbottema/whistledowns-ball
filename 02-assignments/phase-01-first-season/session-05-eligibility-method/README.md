@@ -12,13 +12,15 @@ By the end of this session you can:
 
 ### A method is a named rule
 
-You’re going to implement:
+You're going to implement:
 
 ```java
 static boolean isEligible(int age, String familyName)
 ```
 
-Think of it as: “given this input, what should the outcome be?”
+Think of it as: "given this input, what should the outcome be?"
+
+**About `static`**: This keyword means "this method belongs to the class itself, not to a specific object". You can call it directly without creating an object first (e.g., `isEligible(21, "Bridgerton")`). In test automation terms: it's a utility function you can call anytime.
 
 ### Return `true/false` like a test result
 
