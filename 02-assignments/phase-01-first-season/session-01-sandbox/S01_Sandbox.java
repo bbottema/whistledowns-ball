@@ -1,32 +1,30 @@
-// Session 01 - Java basics in the JShell Sandbox
+// Session 01 – Java Sandbox (JShell)
+//
+// Welcome to your first session!
+//
+// Start:
+// 1) Read `README.md` in this folder for how to run JShell.
+// 2) Follow the TODO blocks below in order.
+//
+// How to use this file:
+// - These snippets are meant for JShell (Tools -> JShell Console...).
+// - Copy/paste lines into JShell WITHOUT the leading `//`.
+// - Run a TODO block completely before moving to the next.
+//
+// If this is your first time touching Java: you're doing fine. This is a safe place to poke the language and see what it does.
 
-/*
- * So, here we are! This is the beginning of your first session. Make sure you read the README.md first.
- *
- * This session is about learning how to define a variable that can hold different types of data.
- *
- * In Java, everything that can hold or give a value is always preceded by a type. You can say it out loud the same way you declare a variable:
- * "I'm declaring an 'integer' named 'age' and I'm giving it the value '21'" -> integer age = 21
- *
- * There are a few different types of data that variables can hold, such as integers, strings, and booleans. Don't worry about all the other types yet; in fact, with these three types
- * you can already create everything you need to create a program. You can use integers to represent numbers, strings to represent text, and booleans to represent true/false values.
- */
-
-// Copy these snippets into the JShell Console (Tools -> JShell Console...)
-// Type or paste them one at a time and observe the output
-
-// TODO: Declare three variables
+// TODO 1: Declare three variables
 // int age = 21;
 // String family = "Bridgerton";
 // boolean invited = true;
 
-// TODO: Print each variable
+// TODO 2: Print each variable
 // System.out.println(age);
 // System.out.println(family);
 // System.out.println(invited);
 
-// TODO: Trigger a controlled exception (see what happens!)
+// TODO 3: Trigger a controlled runtime exception (this is expected!)
 // throw new RuntimeException("Lady Whistledown disapproves.");
 
-// OPTIONAL: Try this to see a parsing error
+// OPTIONAL: Trigger a parsing error (NumberFormatException)
 // Integer.parseInt("not-a-number");
