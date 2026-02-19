@@ -1,22 +1,41 @@
-# Session 17 – Human Readable Reports
+# Session 17 – Human-readable reports (make output pleasant)
 
-## Goal
+## What you’ll get out of this
 
-Improve output formatting with professional-looking reports using String formatting.
+By the end of this session you can:
 
-## What You'll Do
+- print a more professional-looking report (aligned columns)
+- add a header/footer and summary numbers
+- use formatting as a test automation skill (readability matters)
 
-1. Use String.format() for aligned columns
-2. Add a report header and footer
-3. Calculate and display summary statistics
-4. Create polished, readable output
+## Concepts (quick read, then do the TODOs)
 
-## How to Run It
+### `String.format` = alignment + consistency
 
-1. Open all Java files in this session
-2. Right-click `S17_Assignment.java` and run it
+Rule of thumb:
 
-## Expected Output
+- `%s` for strings
+- `%d` for integers
+- `%-18s` means “left-align in a 18-char column”
+
+## Start here
+
+1. Open `S17_Assignment.java`.
+2. Uncomment the TODO blocks in order.
+3. Run it.
+
+## How to run (IntelliJ)
+
+1. Open `S17_Assignment.java`.
+2. Click the green ▶ next to `main(...)`.
+
+## Plan B
+
+Right-click inside `S17_Assignment.java` and choose **Run 'S17_Assignment.main()'**.
+
+## What “success” looks like
+
+You should see a report similar to:
 
 ```
 ========================================
@@ -35,18 +54,9 @@ Rejected: 2
 ========================================
 ```
 
-## If You Get Stuck
+## Troubleshooting
 
-**String.format() syntax**
-- Use `%s` for strings
-- Use `%d` for integers
-- Use `%-20s` for left-aligned with width 20
+### Columns look messy
 
-**Alignment issues**
-- Check your format string width specifications
-
-## Coach Notes
-
-Professional output matters in automation. Well-formatted reports are easier to read and understand.
-
-String.format() is a powerful tool for creating aligned, readable output - essential for test reports.
+- Recheck your widths (the number in `%-18s`).
+- Make sure you’re using the same format string for each row.

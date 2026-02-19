@@ -1,22 +1,45 @@
-# Session 18 – Season Statistics
+# Session 18 – Season statistics (analyse results)
 
-## Goal
+## What you’ll get out of this
 
-Add statistical analysis to the Ball, including counting and finding the most common rejection reason.
+By the end of this session you can:
 
-## What You'll Do
+- count invited vs rejected guests
+- count rejection reasons (grouping) using a `Map`
+- find the most common rejection reason
 
-1. Count total guests, invited, and rejected
-2. Track rejection reasons in a Map
-3. Find the most common rejection reason
-4. Print a statistical summary
+## Concepts (quick read, then do the TODOs)
 
-## How to Run It
+### This is test reporting logic
 
-1. Open all Java files in this session
-2. Right-click `S18_Assignment.java` and run it
+Test-analyst translation: you’re building the “how many failed, and why?” summary.
 
-## Expected Output
+### Counting with a map
+
+The safe counting pattern:
+
+```java
+counts.put(key, counts.getOrDefault(key, 0) + 1);
+```
+
+## Start here
+
+1. Open `S18_Assignment.java`.
+2. Uncomment the TODO blocks in order.
+3. Run it.
+
+## How to run (IntelliJ)
+
+1. Open `S18_Assignment.java`.
+2. Click the green ▶ next to `main(...)`.
+
+## Plan B
+
+Right-click inside `S18_Assignment.java` and choose **Run 'S18_Assignment.main()'**.
+
+## What “success” looks like
+
+You should see something like:
 
 ```
 === Season Statistics ===
@@ -27,19 +50,12 @@ Most Common Rejection: AgeRule (1 occurrences)
 ==========================
 ```
 
-## If You Get Stuck
+## Troubleshooting
 
-**Map operations confusing**
-- Use `getOrDefault(key, 0)` to safely increment counts
-- Loop through Map entries to find the maximum
+### Counts look too high
 
-**Logic errors**
-- Make sure you're only counting rejection reasons for rejected guests
+- Only count rejection reasons for guests that are actually rejected.
 
-## Coach Notes
+### Most common reason is missing
 
-This is practical data aggregation - counting, grouping, and finding patterns in data.
-
-In test automation, you often need to analyze test results: how many passed, how many failed, what's the most common failure reason?
-
-Maps are perfect for counting occurrences of things.
+- If there are no rejections, your reasons map will be empty.

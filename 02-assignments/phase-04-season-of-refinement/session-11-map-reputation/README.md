@@ -1,23 +1,51 @@
-# Session 11 – Map & Reputation
+# Session 11 – Reputation map (data-driven rules)
 
-## Goal
+## What you’ll get out of this
 
-Introduce data-driven validation using a Map to store reputation scores.
+By the end of this session you can:
 
-## What You'll Do
+- use a `Map` as a lookup table (key → value)
+- treat rule data as *test data* (separate from your logic)
+- handle “unknown key” safely (no surprise `NullPointerException`)
 
-1. Create a Map of family names to reputation scores
-2. Test Map lookups
-3. Add Theo Sharpe (fails on reputation, not age)
-4. Implement ReputationRule
-5. Add the rule to the Ball
+## Concepts (quick read, then do the TODOs)
 
-## How to Run It
+### Map = lookup table
 
-1. Open all Java files in this session
-2. Right-click `S11_Assignment.java` and run it
+In testing terms: a `Map` is a tiny in-memory data source.
 
-## Expected Output
+```java
+Integer rep = reputations.get("Basset");
+```
+
+### `get(...)` can return `null`
+
+If the key doesn’t exist, `Map.get(...)` returns `null`.
+That’s not a crash by itself — it’s a signal that your data is missing.
+
+### Data-driven rule
+
+Your `ReputationRule` uses the map as input.
+That’s the point: change the data, change the behaviour.
+
+## Start here
+
+1. Open `S11_Assignment.java` and follow the TODOs.
+2. Implement any missing TODOs in the supporting classes (the rule + ball).
+3. Run the assignment.
+
+## How to run (IntelliJ)
+
+1. Open `S11_Assignment.java`.
+2. Click the green ▶ next to `main(...)`.
+
+## Plan B
+
+Right-click inside `S11_Assignment.java` and choose **Run 'S11_Assignment.main()'**.
+
+## What “success” looks like
+
+You should observe:
 
 ```
 10
@@ -27,17 +55,13 @@ Simon -> INVITED
 Theo -> NOT INVITED
 ```
 
-## If You Get Stuck
+## Troubleshooting
 
-**NullPointerException in ReputationRule**
-- Check if the Map.get() returned null
-- Handle unknown families properly
+### `NullPointerException` in `ReputationRule`
 
-**Import error**
-- Add `import java.util.Map;` at the top
+- `reputations.get(...)` returned `null` and you treated it like a number.
+- Fix: decide what “unknown family” means (usually: fail the rule).
 
-## Coach Notes
+### Import errors
 
-Map is like a lookup table or dictionary: given a key, get a value.
-
-This is data-driven testing: your rule uses test data (the reputation map) to make decisions. Separate logic from data.
+- If `Map` is red, add `import java.util.Map;`.

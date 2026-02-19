@@ -1,22 +1,45 @@
-# Session 16 – Parameterized Cases
+# Session 16 – Parameterized cases (data-driven tests)
 
-## Goal
+## What you’ll get out of this
 
-Simulate parameterized testing by looping over test cases with expected outcomes.
+By the end of this session you can:
 
-## What You'll Do
+- define test cases as data (input + expected outcome)
+- loop over them and print PASS/FAIL
+- compare expected vs actual in a way that scales
 
-1. Define test cases as data (name, age, family, expected result)
-2. Loop over test cases
-3. Compare actual vs expected results
-4. Print PASS/FAIL for each case
+## Concepts (quick read, then do the TODOs)
 
-## How to Run It
+### Parameterized testing = same test, many rows
 
-1. Open all Java files in this session
-2. Right-click `S16_Assignment.java` and run it
+This session is basically “table-driven testing” in plain Java.
 
-## Expected Output
+### Compare expected vs actual
+
+You’ll compare:
+
+```java
+result.invited == testCase.expectedInvited
+```
+
+## Start here
+
+1. Open `S16_Assignment.java`.
+2. Uncomment the TODO blocks in order.
+3. Run it.
+
+## How to run (IntelliJ)
+
+1. Open `S16_Assignment.java`.
+2. Click the green ▶ next to `main(...)`.
+
+## Plan B
+
+Right-click inside `S16_Assignment.java` and choose **Run 'S16_Assignment.main()'**.
+
+## What “success” looks like
+
+You should see:
 
 ```
 Test Case: Daphne (21, Bridgerton) -> PASS
@@ -26,14 +49,8 @@ Test Case: Theo (21, Sharpe) -> PASS
 All 4 test cases passed!
 ```
 
-## If You Get Stuck
+## Troubleshooting
 
-**Logic errors in comparison**
-- Check that you're comparing actual.invited with expected value
-- Make sure test data matches reality
+### PASS/FAIL looks wrong
 
-## Coach Notes
-
-This is manual parameterized testing - the foundation of data-driven automation.
-
-You're learning to separate test data from test logic, which is crucial for scalable testing.
+- Make sure you’re comparing `result.invited` (actual) with `expectedInvited` (expected).

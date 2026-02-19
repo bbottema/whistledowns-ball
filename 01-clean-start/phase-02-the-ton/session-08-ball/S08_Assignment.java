@@ -6,6 +6,7 @@ public class S08_Assignment {
         // Session 08 – Demo runner
         //
         // Start:
+        // 0) Read `README.md` in this folder.
         // 1) Implement the TODOs in `S08_Ball.java` first.
         // 2) Uncomment the TODO blocks below.
         // 3) Run this file to print the registry.

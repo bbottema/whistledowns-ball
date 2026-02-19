@@ -4,6 +4,7 @@ public class S06_Assignment {
         // Session 06 – Demo runner
         //
         // Start:
+        // 0) Read `README.md` in this folder.
         // 1) Implement the TODOs in `S06_Socialite.java` first.
         // 2) Then uncomment the TODOs below.
         // 3) Run this file.

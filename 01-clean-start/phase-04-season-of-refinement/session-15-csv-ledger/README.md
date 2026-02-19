@@ -1,23 +1,48 @@
-# Session 15 – CSV Ledger
+# Session 15 – CSV ledger (load test data from a file)
 
-## Goal
+## What you’ll get out of this
 
-Load guest data from a CSV file instead of hardcoding, introducing file I/O and defensive parsing.
+By the end of this session you can:
 
-## What You'll Do
+- load test data from a CSV file (instead of hardcoding)
+- parse rows defensively (bad data happens)
+- keep the test run going even if one row is messy
 
-1. Read a CSV file containing guest information
-2. Parse each line into Socialite objects
-3. Handle malformed rows gracefully
-4. Run the Ball logic on loaded guests
+## Concepts (quick read, then do the TODOs)
 
-## How to Run It
+### File I/O is test automation reality
 
-1. Open all Java files in this session
-2. Note the `season-ledger.csv` file
-3. Right-click `S15_Assignment.java` and run it
+In real projects, test data often comes from files.
+This session makes that feel normal.
 
-## Expected Output
+### Defensive parsing
+
+CSV rows can be:
+
+- missing columns
+- having non-numeric ages
+
+Your job: don’t crash the whole run because of one bad row.
+
+## Start here
+
+1. Open `S15_Assignment.java`.
+2. Follow the TODO block (uncomment the `try/catch` and loader call).
+3. Fix/implement parsing in `S15_GuestLoader` if needed.
+4. Run the assignment.
+
+## How to run (IntelliJ)
+
+1. Open `S15_Assignment.java`.
+2. Click the green ▶ next to `main(...)`.
+
+## Plan B
+
+Right-click inside `S15_Assignment.java` and choose **Run 'S15_Assignment.main()'**.
+
+## What “success” looks like
+
+You should see something like:
 
 ```
 Loaded 5 guests from season-ledger.csv
@@ -28,26 +53,18 @@ Theo -> NOT INVITED (reasons: [ReputationRule])
 Eloise -> INVITED
 ```
 
-## If You Get Stuck
+## Troubleshooting
 
-**FileNotFoundException**
-- Make sure `season-ledger.csv` is in the same folder as your Java files
+### `FileNotFoundException`
 
-**ArrayIndexOutOfBoundsException**
-- Check your string split logic
-- Handle rows with wrong number of columns
+- Make sure `season-ledger.csv` is in the same folder (session folder) as the Java files.
 
-**NumberFormatException**
-- Use Integer.parseInt() carefully
-- Handle non-numeric age values
+### `ArrayIndexOutOfBoundsException`
 
-## Coach Notes
+- A row didn’t have enough comma-separated columns.
+- Fix: check `parts.length` before reading `parts[0]`, `parts[1]`, etc.
 
-File I/O is a core automation skill. Test data often comes from files, not hardcoded values.
+### `NumberFormatException`
 
-This session introduces:
-- Reading files with Files.readAllLines()
-- Parsing CSV data with String.split()
-- Defensive programming (handling bad data)
-
-Keep it simple - no CSV libraries needed. Just split by comma and handle errors.
+- Age wasn’t a number.
+- Fix: catch it and skip the row (or use a default age).

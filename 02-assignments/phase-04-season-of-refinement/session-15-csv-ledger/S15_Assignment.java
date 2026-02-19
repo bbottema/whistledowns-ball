@@ -2,10 +2,17 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+// Session 15 – CSV ledger
+//
+// Start here:
+// 1) Read `README.md` in this folder.
+// 2) Uncomment the try/catch below.
+// 3) Run `main(...)`.
+
 public class S15_Assignment {
     public static void main(String[] args) {
 
-        // TODO: Load guests from CSV file
+        // TODO 1: Load guests from CSV file
         // try {
         //     List<S15_Socialite> guests = S15_GuestLoader.loadFromCsv("season-ledger.csv");
         //     System.out.println("Loaded " + guests.size() + " guests from season-ledger.csv");

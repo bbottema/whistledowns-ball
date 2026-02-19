@@ -1,32 +1,58 @@
-# Session 10 – JUnit Preview
+# Session 10 – JUnit preview (read-only)
 
-## Goal
+This session is a preview. We’re **not** setting up JUnit in this warmup repo.
+The goal is simply: when you meet JUnit in the real course, it won’t feel like a foreign language.
 
-See what JUnit tests look like without diving deep into setup.
+## What you’ll get out of this
 
-## What You'll Do
+By the end of this session you can:
 
-1. Look at a JUnit test structure
-2. Understand @Test annotation
-3. See built-in assertions
+- recognise the basic shape of a JUnit test
+- map it to a testing workflow you already know (Arrange → Act → Assert)
+- recognise the most common annotations and assertions (`@Test`, `assertTrue`, `assertFalse`)
 
-## How to Run It
+## Concepts (quick read, then do the TODOs)
 
-**Note:** This session is a preview only. JUnit setup is not included in this warmup project. This file shows you what JUnit looks like so you recognize it in your course.
+### `@Test` marks a test
 
-## What to Notice
+JUnit runs methods annotated with `@Test`.
 
-- `@Test` marks a method as a test
-- Method names describe what's being tested
-- Assertions are built into JUnit
-- Each test method runs independently
+### Assertions are built-in
 
-## If You Get Stuck
+Instead of writing your own `MiniAsserts`, JUnit gives you:
 
-This session is for reading and understanding, not for running. You'll set up JUnit properly in your course.
+```java
+assertTrue(...)
+assertFalse(...)
+assertEquals(...)
+```
 
-## Coach Notes
+### Tests should be independent
 
-JUnit is the industry-standard testing framework for Java. You've already built the concepts (arrange, act, assert). JUnit just provides the professional tooling.
+Each test sets up its own data.
+If one test fails, the others should still be able to run.
 
-When you see JUnit in your course, you'll recognize: "I already understand what this does."
+## Start here
+
+Open `S10_Assignment.java` and read the example.
+That file is the entry point for this session.
+
+## How to run
+
+You don’t run this session inside this warmup project.
+It’s intentionally read-only.
+
+## What “success” looks like
+
+Success is: you can look at the code and say:
+
+- “Ah, this is a test method.”
+- “This part is setup (arrange).”
+- “This is the check (assert).”
+
+## Troubleshooting
+
+### “But I want to run it!”
+
+Totally fair.
+You’ll run JUnit for real in the course project where it’s properly configured.

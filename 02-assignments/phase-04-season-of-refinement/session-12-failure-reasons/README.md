@@ -1,21 +1,49 @@
-# Session 12 – Failure Reasons
+# Session 12 – Failure reasons (make failures helpful)
 
-## Goal
+## What you’ll get out of this
 
-Add diagnostic output explaining WHY someone is not invited.
+By the end of this session you can:
 
-## What You'll Do
+- collect failure reasons instead of only returning `true/false`
+- print output that explains *why* a guest is rejected
+- treat diagnostics like a test report (useful, not noisy)
 
-1. Add `failureReasons` method to Ball
-2. Upgrade `printRegistry` to show failure reasons
-3. See detailed output for failed guests
+## Concepts (quick read, then do the TODOs)
 
-## How to Run It
+### “Why did it fail?” is part of the result
 
-1. Open all Java files in this session
-2. Right-click `S12_Assignment.java` and run it
+In automation, a failing check without context is painful.
+We want:
 
-## Expected Output
+- pass/fail
+- plus a short list of reasons when it fails
+
+### Empty list = “no failures”
+
+If your failures list is empty, that’s a pass.
+
+```java
+failures.isEmpty()
+```
+
+## Start here
+
+1. Open `S12_Assignment.java` and follow the TODOs.
+2. Implement the `failureReasons` / registry printing logic in the supporting classes.
+3. Run the assignment.
+
+## How to run (IntelliJ)
+
+1. Open `S12_Assignment.java`.
+2. Click the green ▶ next to `main(...)`.
+
+## Plan B
+
+Right-click inside `S12_Assignment.java` and choose **Run 'S12_Assignment.main()'**.
+
+## What “success” looks like
+
+You should see:
 
 ```
 Daphne -> INVITED
@@ -24,16 +52,12 @@ Simon -> INVITED
 Theo -> NOT INVITED (failed: [ReputationRule])
 ```
 
-## If You Get Stuck
+## Troubleshooting
 
-**Empty list not working correctly**
-- Use `failures.isEmpty()` to check if list is empty
+### “Empty list” logic is inverted
 
-**Import error**
-- Add `import java.util.ArrayList;`
+- Fix: use `failures.isEmpty()` to detect “no failures”.
 
-## Coach Notes
+### Import errors
 
-Tests shouldn't just fail; they should explain why. This is diagnostic reporting.
-
-The pattern: accumulate failures, then report them. This appears everywhere in test automation and quality reports.
+- If `ArrayList` is red, add `import java.util.ArrayList;`.

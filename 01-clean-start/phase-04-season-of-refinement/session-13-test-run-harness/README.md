@@ -1,37 +1,50 @@
-# Session 13 – Test Run Harness
+# Session 13 – Test run harness (Arrange → Act → Assert → Report)
 
-## Goal
+## What you’ll get out of this
 
-Create an automation-style test harness that arranges data, runs checks, and reports results.
+By the end of this session you can:
 
-## What You'll Do
+- write a tiny automation-style “test run” in plain Java
+- organise your code into Arrange / Act / Assert / Report sections
+- treat failures as useful output (the harness tells you what didn’t match)
 
-1. Create a RegistryTestRun class
-2. Arrange test data (reputations, guests)
-3. Assert expected outcomes
-4. Report success
+## Concepts (quick read, then do the TODOs)
 
-## How to Run It
+### AAA is a readability superpower
 
-1. Open `S13_Assignment.java`
-2. Right-click and run it
+Even without JUnit, you can structure your checks like tests:
 
-## Expected Output
+- **Arrange**: build test data and system under test
+- **Act**: run the behaviour
+- **Assert**: compare expected vs actual
+- **Report**: print a summary
+
+## Start here
+
+1. Open `S13_Assignment.java`.
+2. Follow the TODO blocks in order.
+3. Run it.
+
+## How to run (IntelliJ)
+
+1. Open `S13_Assignment.java`.
+2. Click the green ▶ next to `main(...)`.
+
+## Plan B
+
+Right-click inside `S13_Assignment.java` and choose **Run 'S13_Assignment.main()'**.
+
+## What “success” looks like
+
+You should see:
 
 ```
 Registry checks: PASS
 ```
 
-## If You Get Stuck
+## Troubleshooting
 
-**Assertion fails**
-- Check your test data matches expectations
-- Review the logic in your rules
+### `AssertionError`
 
-## Coach Notes
-
-This is the shape of automated test runs: Arrange → Act → Assert → Report.
-
-You've built all the pieces: data structures, rules, orchestration, assertions, and now a harness that ties it together. This is test automation thinking.
-
-Congratulations! You've completed the warmup. You're ready for your course.
+- One of your expectations didn’t match.
+- Check your test data and the rule logic.

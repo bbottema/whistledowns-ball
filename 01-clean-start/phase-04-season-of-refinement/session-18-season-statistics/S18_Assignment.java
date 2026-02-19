@@ -2,10 +2,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// Session 18 – Season statistics
+//
+// Start here:
+// 1) Read `README.md` in this folder.
+// 2) Uncomment the TODO blocks below in order.
+// 3) Run `main(...)`.
+
 public class S18_Assignment {
     public static void main(String[] args) {
 
-        // TODO: Create reputation map and ball
+        // TODO 1: Create reputation map and ball
         // Map<String, Integer> reputations = Map.of(
         //     "Bridgerton", 9,
         //     "Featherington", 6,
@@ -19,7 +26,7 @@ public class S18_Assignment {
         //     new S18_ReputationRule(reputations)
         // ));
 
-        // TODO: Create guest list
+        // TODO 2: Create guest list
         // List<S18_Socialite> guests = List.of(
         //     new S18_Socialite("Daphne", 21, "Bridgerton"),
         //     new S18_Socialite("Penelope", 16, "Featherington"),
@@ -27,7 +34,7 @@ public class S18_Assignment {
         //     new S18_Socialite("Theo", 21, "Sharpe")
         // );
 
-        // TODO: Calculate statistics
+        // TODO 3: Calculate statistics
         // int totalGuests = guests.size();
         // int invitedCount = 0;
         // int rejectedCount = 0;
@@ -47,7 +54,7 @@ public class S18_Assignment {
         //     }
         // }
 
-        // TODO: Find most common rejection reason
+        // TODO 4: Find most common rejection reason
         // String mostCommonReason = null;
         // int maxCount = 0;
         // for (Map.Entry<String, Integer> entry : rejectionReasons.entrySet()) {
@@ -57,7 +64,7 @@ public class S18_Assignment {
         //     }
         // }
 
-        // TODO: Print statistics
+        // TODO 5: Print statistics
         // System.out.println("=== Season Statistics ===");
         // System.out.println("Total Guests: " + totalGuests);
         // System.out.println("Invited: " + invitedCount);

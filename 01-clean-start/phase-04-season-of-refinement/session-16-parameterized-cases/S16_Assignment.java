@@ -1,10 +1,17 @@
 import java.util.List;
 import java.util.Map;
 
+// Session 16 – Parameterized cases
+//
+// Start here:
+// 1) Read `README.md` in this folder.
+// 2) Uncomment the TODO blocks below in order.
+// 3) Run `main(...)`.
+
 public class S16_Assignment {
     public static void main(String[] args) {
 
-        // TODO: Define test cases with expected outcomes
+        // TODO 1: Define test cases with expected outcomes
         // List<S16_TestCase> testCases = List.of(
         //     new S16_TestCase("Daphne", 21, "Bridgerton", true),
         //     new S16_TestCase("Penelope", 16, "Featherington", false),
@@ -12,7 +19,7 @@ public class S16_Assignment {
         //     new S16_TestCase("Theo", 21, "Sharpe", false)
         // );
 
-        // TODO: Create reputation map
+        // TODO 2: Create reputation map
         // Map<String, Integer> reputations = Map.of(
         //     "Bridgerton", 9,
         //     "Featherington", 6,
@@ -20,14 +27,14 @@ public class S16_Assignment {
         //     "Sharpe", 2
         // );
 
-        // TODO: Create Ball
+        // TODO 3: Create Ball
         // S16_Ball ball = new S16_Ball(List.of(
         //     new S16_AgeRule(),
         //     new S16_FamilyNameRule(),
         //     new S16_ReputationRule(reputations)
         // ));
 
-        // TODO: Loop over test cases and compare actual vs expected
+        // TODO 4: Loop over test cases and compare actual vs expected
         // int passedCount = 0;
         // int failedCount = 0;
         //

@@ -1,6 +1,12 @@
-// This is a preview of what JUnit tests look like
-// JUnit is not set up in this warmup project
-// You'll configure JUnit properly in your course
+// Session 10 – JUnit preview (read-only)
+//
+// Start here:
+// 1) Read `README.md` in this folder.
+// 2) Read the example below.
+// 3) Your job is to recognise the shape (Arrange / Act / Assert), not to run it.
+//
+// JUnit is intentionally NOT set up in this warmup project.
+// You’ll configure and run JUnit in your actual Java testing course.
 
 // import org.junit.jupiter.api.Test;
 // import static org.junit.jupiter.api.Assertions.*;
@@ -31,8 +37,8 @@
 //     }
 // }
 
-// What to notice:
-// - @Test marks each test method
-// - Method names are descriptive
-// - assertTrue and assertFalse are built-in
-// - Each test is independent
+// TODO: What to notice
+// 1) `@Test` marks each test method
+// 2) Method names describe the scenario
+// 3) Each test creates its own data (independent tests)
+// 4) `assertTrue` / `assertFalse` are built-in assertions

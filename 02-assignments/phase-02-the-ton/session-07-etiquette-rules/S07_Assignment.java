@@ -6,6 +6,7 @@ public class S07_Assignment {
         // Session 07 – Demo runner
         //
         // Start:
+        // 0) Read `README.md` in this folder.
         // 1) Implement the interface + rules (see the TODOs in the other files).
         // 2) Uncomment the TODOs below.
         // 3) Run this file.

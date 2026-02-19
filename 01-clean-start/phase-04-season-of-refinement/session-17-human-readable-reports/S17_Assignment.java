@@ -1,10 +1,17 @@
 import java.util.List;
 import java.util.Map;
 
+// Session 17 – Human-readable reports
+//
+// Start here:
+// 1) Read `README.md` in this folder.
+// 2) Uncomment the TODO blocks below in order.
+// 3) Run `main(...)`.
+
 public class S17_Assignment {
     public static void main(String[] args) {
 
-        // TODO: Create reputation map and ball
+        // TODO 1: Create reputation map and ball
         // Map<String, Integer> reputations = Map.of(
         //     "Bridgerton", 9,
         //     "Featherington", 6,
@@ -18,7 +25,7 @@ public class S17_Assignment {
         //     new S17_ReputationRule(reputations)
         // ));
 
-        // TODO: Create guest list
+        // TODO 2: Create guest list
         // List<S17_Socialite> guests = List.of(
         //     new S17_Socialite("Daphne", 21, "Bridgerton"),
         //     new S17_Socialite("Penelope", 16, "Featherington"),
@@ -26,14 +33,14 @@ public class S17_Assignment {
         //     new S17_Socialite("Theo", 21, "Sharpe")
         // );
 
-        // TODO: Print formatted report with header
+        // TODO 3: Print formatted report with header
         // System.out.println("========================================");
         // System.out.println("   Whistledown's Society Report");
         // System.out.println("========================================");
         // System.out.println(String.format("%-18s %-4s %-17s %s", "Name", "Age", "Family", "Status"));
         // System.out.println("--------------------------------------------------");
 
-        // TODO: Loop through guests, count invited/rejected
+        // TODO 4: Loop through guests, count invited/rejected
         // int invitedCount = 0;
         // int rejectedCount = 0;
         //
@@ -51,7 +58,7 @@ public class S17_Assignment {
         //         guest.name, guest.age, guest.familyName, status));
         // }
 
-        // TODO: Print summary footer
+        // TODO 5: Print summary footer
         // System.out.println("--------------------------------------------------");
         // System.out.println("Total Guests: " + guests.size());
         // System.out.println("Invited: " + invitedCount);
