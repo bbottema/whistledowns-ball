@@ -10,58 +10,19 @@ You are trying to run it.
 By the end of this session, you will be able to:
 
 - run a tiny Java program and re-run it quickly
-- store values in variables (`int`, `String`, `boolean`)
-- print debug-style output to the console
+- store a few values in variables (`int`, `String`, `boolean`) just enough to get output
+- print debug-style output to the console (your main “testing signal” today)
 - tell apart a **runtime exception** (a crash while running) from a **syntax/parsing error** (a compile-time problem)
 
 You’ll run everything from a regular Java program using the green ▶ run button. That’s the most important button in this project.
 
 ## Concepts (quick read, then do the TODOs)
 
-### Variables = named boxes for values
+Session 01 keeps concepts deliberately lightweight.
+If you want a friendly explanation (aimed at non-developers), read these:
 
-In Java, you create a variable in one line. Think: “create a value I can reuse later.”
-
-```
-int age = 21;
-```
-
-That line has three parts:
-
-1. **Type**: `int` → what kind of value this variable can hold
-2. **Name**: `age` → how you refer to it later
-3. **Value**: `21` → the starting value
-
-### Types you’ll use today
-
-- `int` → whole numbers (e.g. `21`)
-- `String` → text in double quotes (e.g. `"Bridgerton"`)
-- `boolean` → `true` or `false`
-
-Java is *typed*: once you declare `int age`, you can change the value later, but it must remain an `int`.
-If that sounds strict: good. It’s built-in validation. Java helps you catch mistakes early.
-
-There are many such types, but with these three alone, you can already do many things!
-
-### Printing values (hello, debugging)
-
-`System.out.println(...)` prints whatever you put inside the parentheses. This is the Java version of quick “log it and see” debugging. 
-This is the simplest way to understand what your program is doing. If you're unsure what something does, print it:
-
-```
-System.out.println(age);
-```
-
-If this looks verbose, that’s normal. It’s one of the oldest parts of Java, and you’ll type this a lot. It becomes automatic quickly.
-
-### Errors are information (not a personal insult)
-
-In Java, crashes during execution are usually called **exceptions**. They represent a crash, and crashes are information. They can halt a program. That’s okay. Today we’ll trigger one on purpose.
-
-- A **runtime exception** happens *while the code is running* (we’ll deliberately `throw new RuntimeException(...)`).
-- A **syntax/parsing error** happens when Java can’t understand what you wrote.
-
-Later in the course you’ll see specific exceptions like  **NumberFormatException**; they’re just more precise versions of the same idea.
+- [`help me understand/Running Java and reading the console.md`](help%20me%20understand/Running%20Java%20and%20reading%20the%20console.md)
+- [`help me understand/Runtime vs Compile errors.md`](help%20me%20understand/Runtime%20vs%20Compile%20errors.md)
 
 ## Start here
 

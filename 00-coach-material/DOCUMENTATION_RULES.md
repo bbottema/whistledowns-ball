@@ -12,13 +12,18 @@ The audience is **test analysts who are nervous about Java**. The goal is to mak
 For every session:
 
 - **Same shape every time**: learners should recognize the page structure immediately.
-- **Task-first**: quick “what you’ll get out of this”, then tiny concepts, then do the TODOs.
+- **Task-first**: quick “what you’ll get out of this”, then just enough concepts to start, then do the TODOs.
 - **Readable + friendly**: casual, reassuring, “errors are information”, light humor allowed.
 - **Testing mindset**: use test analysts’ mental models and jargon when it helps (setup / test data / observe / expected vs actual).
 - **No doc sprawl**: avoid slides/duplicate instructions scattered around.
 - **Clear boundaries**:
   - Session `README.md` = explanation + how to run + success criteria + troubleshooting
   - Assignment code = action surface (TODO worksheet), minimal commentary, cross-link back to README
+
+- **Layered concepts** (new model):
+  - Session `README.md` contains only *thin* concept rules-of-thumb (what you need today).
+  - Deeper explanations live in **`help me understand/`** markdown files inside the session folder.
+  - The README links to these explainers instead of duplicating them.
 
 ---
 
@@ -57,10 +62,10 @@ Every session `README.md` should follow this structure:
 1. `# Session XX – <topic>`
 2. `## What you’ll get out of this` (3–5 bullets; capabilities, not abstract goals)
 3. `## Concepts (quick read, then do the TODOs)`
-   - 2–5 micro-sections max
-   - each micro-section includes:
-     - a runnable snippet **or** a tight “rule of thumb” + example
-   - keep language test-analyst friendly
+   - either:
+     - a short list of “rules you need for the TODOs”, **and** links to `help me understand/` explainers, or
+     - 1–3 micro-sections that are truly minimal (rule-of-thumb only)
+   - avoid duplicating longer explanations that belong in `help me understand/`
 4. `## Start here`
    - “Open `<main file>` and follow TODO blocks in order”
 5. `## How to run` (primary path)
@@ -90,6 +95,9 @@ For each session’s main assignment file(s):
 Allowed in code comments:
 - concise operational reminders (uncomment TODOs, run TODOs in order)
 - a single reassuring line (“If this is your first time touching Java: you’re doing fine.”)
+
+Encouraged (when a session introduces scary words/symbols):
+- a short “Optional deeper explainers:” list that points to `help me understand/*.md`
 
 ### Special rule: `03-solutions/` files are not learner worksheets
 
@@ -182,8 +190,8 @@ For each session folder (existing or new):
 ### Failure mode A: README turns into a textbook
 
 Safeguards:
-- cap Concepts to 2–5 micro-sections
-- each micro-section must connect to a TODO/snippet immediately
+- keep Session READMEs thin; move longer explanations to `help me understand/`
+- each concept section must connect to a TODO/snippet immediately
 
 ### Failure mode B: README becomes only run instructions
 
@@ -192,6 +200,9 @@ Safeguards:
   - one mental model explanation
   - one runnable snippet or concrete example
   - one “errors are information” framing (especially in early sessions)
+
+Note: The “mental model explanation” can be a link to a `help me understand/` explainer
+as long as the README makes it obvious what to click when confused.
 
 ---
 
