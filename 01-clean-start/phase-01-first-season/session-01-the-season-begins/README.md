@@ -1,23 +1,26 @@
 # Session 01 – First Run – The Season Begins
 
-This session is about getting comfortable pressing Run and seeing what happens.
+This session is about getting comfortable pressing **Run** and observing what happens.
+
+You are not trying to understand Java today.
+You are trying to run it.
 
 ## What you’ll get out of this
 
-By the end of this session you can:
+By the end of this session, you will be able to:
 
 - run a tiny Java program and re-run it quickly
 - store values in variables (`int`, `String`, `boolean`)
 - print debug-style output to the console
-- tell apart a **runtime exception** from a **syntax/parsing error**
+- tell apart a **runtime exception** (a crash while running) from a **syntax/parsing error** (a compile-time problem)
 
-You’ll run everything from a regular Java program using the green ▶ run button.
+You’ll run everything from a regular Java program using the green ▶ run button. That’s the most important button in this project.
 
 ## Concepts (quick read, then do the TODOs)
 
 ### Variables = named boxes for values
 
-In Java, you create a variable in one line. Think: “create a value I can reuse in the next step.”
+In Java, you create a variable in one line. Think: “create a value I can reuse later.”
 
 ```
 int age = 21;
@@ -35,28 +38,30 @@ That line has three parts:
 - `String` → text in double quotes (e.g. `"Bridgerton"`)
 - `boolean` → `true` or `false`
 
-Java is *typed*: once you declare `int age`, you can change the value later, but it must stay an `int`.
-If that sounds strict: good news — it’s basically built-in validation.
+Java is *typed*: once you declare `int age`, you can change the value later, but it must remain an `int`.
+If that sounds strict: good. It’s built-in validation. Java helps you catch mistakes early.
 
 There are many such types, but with these three alone, you can already do many things!
 
 ### Printing values (hello, debugging)
 
-`System.out.println(...)` prints whatever you put inside the parentheses. This is the Java version of quick “log it and see” debugging:
+`System.out.println(...)` prints whatever you put inside the parentheses. This is the Java version of quick “log it and see” debugging. 
+This is the simplest way to understand what your program is doing. If you're unsure what something does, print it:
 
 ```
 System.out.println(age);
 ```
 
-If this looks verbose, that’s normal. It’s one of the oldest parts of Java, and you’ll quickly get used to it.
+If this looks verbose, that’s normal. It’s one of the oldest parts of Java, and you’ll type this a lot. It becomes automatic quickly.
 
 ### Errors are information (not a personal insult)
 
-Errors in Java are called **exceptions**. They represent a crash, and crashes are information. They can completely halt a program, but you can also code around them to decide what should happen next.
+In Java, crashes during execution are usually called **exceptions**. They represent a crash, and crashes are information. They can halt a program. That’s okay. Today we’ll trigger one on purpose.
 
 - A **runtime exception** happens *while the code is running* (we’ll deliberately `throw new RuntimeException(...)`).
 - A **syntax/parsing error** happens when Java can’t understand what you wrote.
-- A **NumberFormatException** is an example of a _runtime exception_, which happens when you ask Java to convert text like `"not-a-number"` into a number.
+
+Later in the course you’ll see specific exceptions like  **NumberFormatException**; they’re just more precise versions of the same idea.
 
 ## Start here
 
@@ -77,8 +82,8 @@ This README explains *what to do next* and what "done" looks like.
 `main(...)` is the start button for a Java program.
 When you click Run, Java begins there and executes the code top-to-bottom.
 
-For now, treat `main(...)` as the program’s entry point.  
-We’ll explain the details later — nothing here requires you to understand those words yet.
+For now, treat `main(...)` as the program’s start button.
+We’ll explain the details later. For now, it’s just the program’s start button.
 
 ## Plan B
 
@@ -100,15 +105,15 @@ A rule is evaluated...
 
 Then you should see a `RuntimeException` with the message `Scandal detected in the ballroom!`.
 
-An exception like this is like a failure report: it tells you what went wrong and where. It's very useful!
+An exception like this is like a failure report: it tells you what went wrong and where.
 
-If you see printed lines followed by a RuntimeException with your message → you succeeded.
+If you see printed lines followed by a RuntimeException with your message, you have done exactly what this session asked you to do.
 
 ## Troubleshooting
 
 ### I can’t find the green run button
 
-- Make sure you’re in `02-assignments/` (that folder is the IntelliJ Sources Root).
+- Make sure you opened the file inside `02-assignments/`, not `01-clean-start` or `03-solutions`.
 - Make sure Project SDK is set to a JDK 21+.
 
 ### It prints, then crashes
@@ -121,4 +126,4 @@ If you see printed lines followed by a RuntimeException with your message → yo
 
 - Check semicolons (`;`) at the end of statements.
 - If IntelliJ shows a red underline, fix that first, then run again.
-- IntelliJ sometimes shows yellow suggestions (a lightbulb icon). These are optional improvements — you can safely ignore them for now.
+- IntelliJ sometimes shows yellow suggestions (a lightbulb icon). These are optional improvements — you can safely ignore them for now. Focus only on red errors (red lightbulb icon).
