@@ -3,7 +3,7 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-first-season/session-01-sandbox" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-first-season/session-01-the-season-begins" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-first-season/session-02-strings-null" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-first-season/session-03-decisions-loops" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/02-assignments/phase-01-first-season/session-05-eligibility-method" isTestSource="false" />

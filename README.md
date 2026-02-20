@@ -55,7 +55,7 @@ Download and install **IntelliJ IDEA Community Edition** (it's free). When you f
 
 Ready to start? Here's what to do:
 
-1. In the Project view (left side), open: `02-assignments/phase-01-first-season/session-01-sandbox`
+1. In the Project view (left side), open: `02-assignments/phase-01-first-season/session-01-the-season-begins`
 2. Open the `S01_Assignment.java` file
 3. Read the session `README.md` for instructions
 4. Click the green ▶ run button to run the program

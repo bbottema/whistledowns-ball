@@ -1,4 +1,6 @@
-# Session 01 – Java Sandbox (run a Java file)
+# Session 01 – First Run – The Season Begins
+
+This session is about getting comfortable pressing Run and seeing what happens.
 
 ## What you’ll get out of this
 
