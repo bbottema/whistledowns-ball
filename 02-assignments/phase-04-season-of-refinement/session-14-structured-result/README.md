@@ -6,7 +6,7 @@ By the end of this session you can:
 
 - return a richer result object instead of a plain boolean
 - carry both the decision *and* the reasons together
-- treat the result like a mini API response (structured, inspectable)
+- treat the result like a mini API response (structured, easy to inspect)
 
 ## Concepts (quick read, then do the TODOs)
 
