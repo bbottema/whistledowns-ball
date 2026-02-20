@@ -8,6 +8,10 @@ Lady Whistledown needs help managing the social registry for the season's ball. 
 
 ## Getting Started
 
+**Java version:** this course targets modern Java, and requires **Java 21 or higher**.
+
+In IntelliJ: set **Project SDK** to your installed JDK (21+). If you don't have one yet, IntelliJ can download it for you. You can manage all this in **File > Project Structure > Project**.
+
 ### Step 1: Install IntelliJ IDEA
 
 Download and install **IntelliJ IDEA Community Edition** (it's free). When you first open it, IntelliJ will offer to download Java for you if you don't have it. Let it do that.
@@ -30,31 +34,16 @@ Download and install **IntelliJ IDEA Community Edition** (it's free). When you f
 3. Navigate to the project folder and click **Open**
 4. If prompted to trust the project, click **Trust Project**
 
-### Step 3: Install JShell Console Plugin (Optional)
-
-Sessions 1-3 work best with JShell for interactive practice.
-
-1. Go to **File → Settings → Plugins** (or **IntelliJ IDEA → Preferences → Plugins** on Mac)
-2. Click **Marketplace**
-3. Search for **"JShell Console"**
-4. Click **Install** and restart when prompted
-
-You can now access JShell via **Tools → JShell Console...**
-
-**Plan B:** If you prefer to skip the JShell plugin, use an IntelliJ Scratch file instead:
-- Right-click anywhere in the Project view
-- Select **New → Scratch File → Java**
-- Copy/paste code snippets and run them there
-
 ### First Run
 
 Ready to start? Here's what to do:
 
 1. In the Project view (left side), open: `02-assignments/phase-01-first-season/session-01-sandbox`
-2. Open the `S01_Sandbox.java` file
+2. Open the `S01_Assignment.java` file
 3. Read the session `README.md` for instructions
-4. For Sessions 1-3: Copy code to JShell Console (or Scratch file)
-5. For Sessions 4+: Click the green ▶ button next to `main(...)`
+4. Click the green ▶ run button to run the program
+
+Note: in Session 01 you'll intentionally crash the program once. Seeing output, then a crash, then a stack trace is expected here — treat it like a useful test failure report.
 
 ## Project Structure
 
@@ -88,22 +77,13 @@ Each of the three folders contains identical phase structure:
 
 ## How to Run a Session
 
-### Phase 1 - Sessions 1-3 (JShell Interactive)
-
-1. Navigate to `02-assignments/phase-01-first-season/session-XX/`
-2. Open the `.java` file in that session
-3. Read the session README.md for guidance
-4. Open JShell Console via **Tools → JShell Console...**
-5. Copy code snippets from the file and paste into JShell
-6. Experiment by modifying values and re-running code
-
-### All other sessions (main method)
-
 1. Navigate to `02-assignments/phase-XX/session-YY/`
 2. Open the Java file(s) in that session
-3. Read the session README.md for guidance
-4. Right-click the file with `main(...)` and select "Run"
-5. Observe output and compare to expected results
+3. Read the session `README.md` for guidance
+4. Run the session program:
+   - Click the green ▶ next to `main(...)`, or
+   - Right-click the file and choose **Run**
+5. Observe output and compare to the "success" section
 
 ## How to Reset a Session
 

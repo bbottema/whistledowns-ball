@@ -1,4 +1,4 @@
-# Session 03 – Decisions & Loops (JShell)
+# Session 03 – Decisions & Loops (run a Java file)
 
 ## What you’ll get out of this
 
@@ -36,8 +36,8 @@ That `a -> true/false` output is basically a tiny table of results.
 
 ### Imports (only for the List example)
 
-JShell doesn’t automatically import everything.
-If you use `List`, paste this first:
+In a Java file, imports go at the top.
+If you use `List`, you’ll need:
 
 ```java
 import java.util.List;
@@ -48,17 +48,15 @@ import java.util.List;
 1. Open `S03_Assignment.java`.
 2. Follow the `TODO` blocks **in order**.
 
-## How to run (recommended: JShell Console)
+## How to run (IntelliJ)
 
-1. Open JShell Console: **Tools → JShell Console...**
-2. Copy snippet lines from `S03_Assignment.java`.
-3. Paste them into JShell **without** the leading `//`.
+1. Open `S03_Assignment.java`.
+2. Uncomment one TODO block at a time.
+3. Click the green ▶ next to `main(...)`.
 
-## Plan B (no plugin): Java Scratch File
+## Plan B
 
-1. In the Project view: **Right-click → New → Scratch File → Java**
-2. Paste the snippet lines (again: without `//`).
-3. Run the scratch file.
+Right-click inside `S03_Assignment.java` and choose **Run**.
 
 ## What “success” looks like
 
@@ -77,9 +75,9 @@ You should observe:
 
 ### “cannot find symbol: List”
 
-- Paste `import java.util.List;` in JShell before the List snippet.
+- Make sure the file has `import java.util.List;` at the top.
 
-### JShell shows `...>` and won’t run yet
+### Code won’t compile
 
-- You’re in a multi-line block.
-- Paste/type the closing `}` and press Enter.
+- Missing `{` or `}` is the most common issue in `if` and `for` blocks.
+- Fix the red underline, then run again.

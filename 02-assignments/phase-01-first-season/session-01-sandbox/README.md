@@ -1,13 +1,15 @@
-# Session 01 – Java Sandbox (JShell)
+# Session 01 – Java Sandbox (run a Java file)
 
 ## What you’ll get out of this
 
 By the end of this session you can:
 
-- run tiny Java snippets interactively (without building a whole app)
+- run a tiny Java program and re-run it quickly
 - store values in variables (`int`, `String`, `boolean`)
 - print debug-style output to the console
 - tell apart a **runtime exception** from a **syntax/parsing error**
+
+You’ll run everything from a normal Java file.
 
 ## Concepts (quick read, then do the TODOs)
 
@@ -49,6 +51,8 @@ Don't worry though, you'll get used to it!
 
 ### Errors are information (not a personal insult)
 
+Errors in Java are called **exceptions** and they represent a crash. They can completely halt a program, but you can also code around them to decide what should happen next.
+
 - A **runtime exception** happens *while the code is running* (we’ll deliberately `throw new RuntimeException(...)`).
 - A **syntax/parsing error** happens when Java can’t understand what you wrote.
 - A **NumberFormatException** is an example of a _runtime exception_, which happens when you ask Java to convert text like `"not-a-number"` into a number.
@@ -58,54 +62,58 @@ Don't worry though, you'll get used to it!
 1. Open `S01_Assignment.java`.
 2. Follow the `TODO` blocks **in order**.
 
-This README explains *how to run* the snippets and what "done" looks like.
+This README explains *what to do next* and what "done" looks like.
 
-## How to run (recommended: JShell Console)
+## How to run (IntelliJ)
 
-JShell is an interactive Java console. No project setup ceremony — just type a line and see what happens.
+1. Open `S01_Assignment.java`.
+2. Uncomment one TODO block.
+3. Click the green ▶ next to `main(...)`.
+4. Read the output and repeat.
 
-1. Install the **JShell Console plugin** (see the repo root `README.md`).
-2. Open the JShell Console: **Tools → JShell Console...**
-3. In `S01_Assignment.java`, copy a snippet line (or a small group of lines).
-4. Paste it into JShell and press Enter.
+### What is `main(...)`?
 
-Tip: The lines in `S01_Assignment.java` are commented out. In JShell, paste them **without** the leading `//`.
+`main(...)` is the start button for a Java program.
+When you click Run, Java begins there and executes the code top-to-bottom.
 
-## Plan B (no plugin): Java Scratch File
+For now, ignore the scary words around it — we’ll explain those later.
 
-If you don't want to install the plugin:
+## Plan B
 
-1. In the Project view: **Right-click → New → Scratch File → Java**
-2. Copy the snippet lines (again: remove the leading `//`).
-3. Run the scratch file.
+Right-click inside `S01_Assignment.java` and choose **Run**.
 
 ## What “success” looks like
 
 You should observe:
 
 1. three printed lines (age, family name, invited status)
-2. a `RuntimeException` with the message `Lady Whistledown disapproves.` (expected)
+2. then some story output, then a crash (expected)
+
+You should see output like:
+
+```
+The season begins...
+A rule is evaluated...
+```
+
+Then you should see a `RuntimeException` with the message `Scandal detected in the ballroom!`.
+
+An exception like this is like a failure report: it tells you what went wrong and where. It's very useful!
 
 ## Troubleshooting
 
-### "JShell Console..." menu item isn't visible
+### I can’t find the green run button
 
-- Install the JShell Console plugin (see the repo root `README.md`).
-- Restart IntelliJ after installing.
+- Make sure you’re in `02-assignments/` (that folder is the IntelliJ Sources Root).
+- Make sure Project SDK is set to a JDK 21+.
 
-### "cannot find symbol" (or similar)
+### It prints, then crashes
 
-- In JShell, run the variable declarations **before** the `System.out.println(...)` lines.
-  (In test terms: you’re using a value before it’s been “set up”.)
+- Good — this session includes an intentional crash.
+- Read the exception message first, then the line number in the stack trace.
 
-### Syntax errors in JShell
+### Syntax/compile errors
 
 - Check semicolons (`;`) at the end of statements.
-- Make sure you removed the leading `//` from the snippet.
-
-### Start over
-
-JShell remembers variables from previous runs.
-
-- In the **IntelliJ JShell Console**, click the **trash/bin** button to wipe the session.
-- (If you're using *terminal* JShell instead, you can type `/reset`.)
+- If IntelliJ shows a red underline, fix that first, then run again.
+- The letter-sized yellow balloon that sometimes pops up is a helper! You can safely ignore it.

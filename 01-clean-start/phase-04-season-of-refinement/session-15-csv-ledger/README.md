@@ -29,14 +29,14 @@ The safe parsing pattern (illustrative snippet — adjust names to match your co
 ```java
 String[] parts = line.split(",");
 if (parts.length < 3) {
-	continue; // skip incomplete rows
+    continue; // skip incomplete rows
 }
 
 try {
-	int age = Integer.parseInt(parts[1].trim());
-	guests.add(new Socialite(parts[0], age, parts[2]));
+    int age = Integer.parseInt(parts[1].trim());
+    guests.add(new Socialite(parts[0], age, parts[2]));
 } catch (NumberFormatException e) {
-	// skip rows with bad age data
+    // skip rows with bad age data
 }
 ```
 

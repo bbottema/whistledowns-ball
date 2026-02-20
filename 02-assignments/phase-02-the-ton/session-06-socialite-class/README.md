@@ -24,7 +24,10 @@ This line:
 new S06_Socialite("Daphne", 21, "Bridgerton")
 ```
 
-means: “Create an object and fill in its fields.”
+means: “Create an object and fill in its fields.”. In this example 'S06_Socialite' is the type of object you want to create (aka class name).
+
+It's like calling a method as you did before, but by using the `new` keyword, you call a special method called the **constructor**.
+Which values you can pass along to this **constructor** is determined by the type you are creating, in this case 'S06_Socialite'.
 
 ### Methods = reusable checks
 

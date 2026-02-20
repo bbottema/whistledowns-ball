@@ -25,7 +25,7 @@ counts.put(key, counts.getOrDefault(key, 0) + 1);
 ## Start here
 
 1. Open `S18_Assignment.java`.
-2. Uncomment the TODO blocks in order.
+2. Uncomment the TODO blocks below in order.
 3. Run it.
 
 ## How to run (IntelliJ)

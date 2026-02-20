@@ -1,4 +1,4 @@
-# Session 02 – Strings & Null (JShell)
+# Session 02 – Strings & Null (run a Java file)
 
 ## What you’ll get out of this
 
@@ -43,19 +43,15 @@ That’s what the optional `IllegalArgumentException` example is for.
 1. Open `S02_Assignment.java`.
 2. Follow the `TODO` blocks **in order**.
 
-## How to run (recommended: JShell Console)
+## How to run (IntelliJ)
 
-JShell is an interactive Java console. It's perfect for quick "poke it and see" experiments.
+1. Open `S02_Assignment.java`.
+2. Uncomment one TODO block at a time.
+3. Click the green ▶ next to `main(...)`.
 
-1. Open JShell Console: **Tools → JShell Console...**
-2. Copy snippet lines from `S02_Assignment.java`.
-3. Paste them into JShell **without** the leading `//`.
+## Plan B
 
-## Plan B (no plugin): Java Scratch File
-
-1. In the Project view: **Right-click → New → Scratch File → Java**
-2. Paste the snippet lines (again: without `//`).
-3. Run the scratch file.
+Right-click inside `S02_Assignment.java` and choose **Run**.
 
 ## What “success” looks like
 
@@ -77,8 +73,7 @@ You should observe:
 - Because `==` is not a text comparison.
 - Fix: use `.equals(...)`.
 
-### JShell says “variable already exists”
+### If you accidentally ran the wrong thing
 
-- JShell remembers your previous run.
-- In the **IntelliJ JShell Console**, click the **trash/bin** button and try again.
-  (If you're using *terminal* JShell instead, type `/reset`.)
+- If you see tooling output that looks unlike a normal program run, you’re probably in the wrong run mode.
+- For this course: run `S02_Assignment.java` as a normal program instead.

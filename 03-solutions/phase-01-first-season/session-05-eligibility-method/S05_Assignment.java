@@ -1,4 +1,4 @@
-public class S05_EligibilityMethod {
+public class S05_Assignment {
 
     static boolean isEligible(int age, String familyName) {
         if (age < 18) return false;

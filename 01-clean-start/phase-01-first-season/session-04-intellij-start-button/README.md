@@ -1,8 +1,8 @@
 # Session 04 – The “Start Button” (`main`)
 
-Starting from this session, we’re leaving JShell and running a real Java program.
+In this session, we're leaving the friendly `main()` and you’ll run a traditional Java program.
 Yes, it comes with the scary-looking `public static void main(String[] args)`.
-No, you don’t need to understand every word in that line yet.
+No, you don’t need to understand the word in that line yet.
 
 ## What you’ll get out of this
 

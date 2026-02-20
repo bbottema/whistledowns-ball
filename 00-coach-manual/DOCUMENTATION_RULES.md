@@ -91,8 +91,16 @@ For each session’s main assignment file(s):
 - Include a **cross-link** back to the session `README.md`.
 
 Allowed in code comments:
-- concise operational reminders (JShell copy/paste, remove `//`, run TODOs in order)
+- concise operational reminders (uncomment TODOs, run TODOs in order)
 - a single reassuring line (“If this is your first time touching Java: you’re doing fine.”)
+
+### Special rule: `03-solutions/` files are not learner worksheets
+
+Solution code under `03-solutions/` should be **clean** and **non-instructional**.
+
+- **Do not** include learner-facing header blocks (no TODO maps, no “Start here”, no “How to run”, no coaching reminders).
+- Allowed: **brief clarifications about the solution itself** (assumptions, edge cases handled, why a particular approach was chosen).
+- If a learner needs instructions, they belong in the session `README.md`, not in `03-solutions/` code.
 
 ---
 
@@ -119,13 +127,12 @@ Avoid:
 
 ### Phase 01 — First Season (Sessions 02–05)
 
-- Likely still JShell-heavy early on.
+- Run the session Java file directly from IntelliJ from day 1.
 - Standardize:
-  - JShell as primary path
-  - Scratch file as fallback
+  - Click the green ▶ next to `main(...)`
+  - Plan B: right-click the file and choose **Run**
 - Troubleshooting should cover:
   - missing semicolons
-  - how to reset JShell state (in IntelliJ JShell Console: Thrash/Bin button)
   - “cannot find symbol” (setup order)
   - `NullPointerException` (Session 02 especially)
 

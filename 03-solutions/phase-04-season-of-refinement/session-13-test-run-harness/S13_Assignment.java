@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Map;
 
-public class S13_RegistryTestRun {
+public class S13_Assignment {
     public static void main(String[] args) {
 
         // Arrange - Create test data
