@@ -11,27 +11,31 @@ By the end of this session you can:
 
 ## Concepts (quick read, then do the TODOs)
 
-### A class is a little data container (with behaviour)
+Read this once, then go do the TODOs.
+In this session, you're going to build one small data object (`S06_Socialite`) and then run checks on it from `S06_Assignment`.
 
-Test-analyst translation: you’re building a tiny **test data model**.
-Instead of passing `name`, `age`, and `familyName` around separately, you pass **one** `S06_Socialite`.
+### A class = a place to keep related test data together
 
-### Constructor = “setup” for your object
+Instead of passing `name`, `age`, and `familyName` as 3 separate values everywhere,
+you put them into one object and pass that object around.
 
-This line:
+In tester terms: it's a tiny "test data record".
+
+### Constructor = the "setup" step when you do `new`
+
+In `S06_Assignment.java` you'll see a line like:
 
 ```java
 new S06_Socialite("Daphne", 21, "Bridgerton")
 ```
 
-means: “Create an object and fill in its fields.”. In this example 'S06_Socialite' is the type of object you want to create (aka class name).
+When that line doesn't compile, don't panic: it's usually just "the constructor parameters in `S06_Socialite` don't match how it's being called".
+Your job in the TODOs is to make the `S06_Socialite` constructor match the usage in the assignment.
 
-It's like calling a method as you did before, but by using the `new` keyword, you call a special method called the **constructor**.
-Which values you can pass along to this **constructor** is determined by the type you are creating, in this case 'S06_Socialite'.
+### Methods = reusable checks you can print as `true/false`
 
-### Methods = reusable checks
-
-`isOfAge()` and `hasRespectableFamily()` are basically tiny reusable validations.
+`isOfAge()` and `hasRespectableFamily()` are small checks.
+When you run `S06_Assignment`, the output (`true`/`false`) is your mini test report.
 
 ## Start here
 

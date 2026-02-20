@@ -1,35 +1,37 @@
-# Session 07 – Rules as a plug-in system (interfaces)
+# Session 07 – Rules as a checklist (interfaces)
 
 ## What you’ll get out of this
 
 By the end of this session you can:
 
-- describe an interface as a “contract” for checks
-- implement two different rule classes that follow the same contract
+- describe an interface as a shared shape for checks
+- implement two different rule classes that follow the same interface
 - loop over a list of rules and apply them to the same test data
 
 ## Concepts (quick read, then do the TODOs)
 
-### Interface = contract
+Read this once, then go do the TODOs.
+You are building a small "rule checklist": multiple checks that can all be run the same way.
 
-Test-analyst translation: we’re making a **standard shape** for checks.
-If something is an `S07_EtiquetteRule`, we know we can call:
+### An interface = "one standard shape" for a check
+
+In `S07_EtiquetteRule.java` you'll define the interface.
+The important part is what it lets you do later: if something is an `S07_EtiquetteRule`, you can call the same methods on it every time.
+
+For example:
 
 ```java
 rule.passes(socialite)
 ```
 
-### Implementations = actual checks
+In tester terms: every rule has a "pass/fail" checkbox.
 
-`S07_AgeRule` and `S07_FamilyNameRule` are two different checks.
-They’re different inside, but they *look the same from the outside*.
+### Implementations = the real checks you'll run
 
-### Polymorphism = "treat different checks the same way"
+`S07_AgeRule` and `S07_FamilyNameRule` are two different rules.
+They do different logic inside, but they both follow the same interface.
 
-That's what lets us put different rule objects in a `List` and loop over them.
-
-Test-analyst translation: imagine a checklist where every item has a pass/fail box.
-Each check is different inside, but you can run them all the same way: loop the list and ask “pass?”
+That means `S07_Assignment` can put them in a list and loop over them without special-casing each rule.
 
 ## Start here
 

@@ -1,4 +1,4 @@
-# Session 08 – The Ball: an orchestrator (apply rules to test data)
+# Session 08 – The Ball: a coordinator (apply rules to test data)
 
 ## What you’ll get out of this
 
@@ -10,13 +10,16 @@ By the end of this session you can:
 
 ## Concepts (quick read, then do the TODOs)
 
-### Orchestrator = runs a bunch of checks for you
+Read this once, then go do the TODOs.
+In this session you're wiring the pieces together: a `Ball` holds a list of rules and uses them to decide who is invited.
 
-Test-analyst translation: the `Ball` is your mini test runner.
+### The `Ball` class = a mini test runner/coordinator
 
-- input = guests (test data)
+In tester terms:
+
+- input = guests (your test data)
 - checks = rules
-- output = printed report
+- output = printed report in the Run window
 
 ### “All rules must pass”
 
