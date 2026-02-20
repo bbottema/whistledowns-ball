@@ -1,4 +1,4 @@
-// Session 01  Java Sandbox
+// Session 01 - Java Sandbox
 //
 // Start:
 // 1) Read `README.md` in this folder.
