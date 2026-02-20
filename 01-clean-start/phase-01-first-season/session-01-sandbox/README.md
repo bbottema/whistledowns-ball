@@ -58,7 +58,7 @@ Don't worry though, you'll get used to it!
 1. Open `S01_Assignment.java`.
 2. Follow the `TODO` blocks **in order**.
 
-This README explains *how to run* the snippets and what “done” looks like.
+This README explains *how to run* the snippets and what "done" looks like.
 
 ## How to run (recommended: JShell Console)
 

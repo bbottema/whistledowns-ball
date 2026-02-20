@@ -45,7 +45,7 @@ That’s what the optional `IllegalArgumentException` example is for.
 
 ## How to run (recommended: JShell Console)
 
-JShell is an interactive Java console. It’s perfect for quick “poke it and see” experiments.
+JShell is an interactive Java console. It's perfect for quick "poke it and see" experiments.
 
 1. Open JShell Console: **Tools → JShell Console...**
 2. Copy snippet lines from `S02_Assignment.java`.

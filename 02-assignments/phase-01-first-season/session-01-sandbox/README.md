@@ -44,7 +44,7 @@ There are many such types, but with these three alone, you can already do nearly
 System.out.println(age);
 ```
 
-If this thing looks scary, you're not wrong: this particular *method call* is a bit verbose because it is one of the oldest parts of Java. 
+If this thing looks scary, you're not wrong: this particular *method call* is a bit verbose because it is one of the oldest parts of Java.
 Don't worry though, you'll get used to it!
 
 ### Errors are information (not a personal insult)

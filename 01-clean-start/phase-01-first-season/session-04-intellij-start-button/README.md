@@ -22,7 +22,7 @@ When you click Run, Java starts at:
 public static void main(String[] args)
 ```
 
-You can treat the rest (`static`, `String[] args`) as required ceremony for now.
+You can treat the rest (`static`, `String[] args`) as required boilerplate code for now. This is also one of the oldest parts of Java!
 
 ### Red underline = a compile-time signal
 
@@ -41,7 +41,7 @@ That’s not failure — that’s fast feedback.
 
 ## Plan B
 
-If you can’t find the green ▶:
+If you can't find the green ▶:
 
 1. Right-click inside `S04_Assignment.java`
 2. Click **Run 'S04_Assignment.main()'**
@@ -56,7 +56,7 @@ Hello tester
 
 ## Troubleshooting
 
-### “Cannot find or load main class”
+### "Cannot find or load main class"
 
 - Make sure the file name and the `class` name match: `S04_Assignment`.
 - Make sure you are running the file that actually contains `main(...)`.
