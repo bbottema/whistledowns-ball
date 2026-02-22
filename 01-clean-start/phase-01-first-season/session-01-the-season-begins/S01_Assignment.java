@@ -6,6 +6,15 @@
 // 3) Run the file.
 //
 // If this is your first time touching Java: you're doing fine.
+//
+// This session is mainly about:
+// - pressing Run
+// - seeing output in the console
+// - seeing an error and learning to read it
+//
+// Optional deeper explainers:
+// - help me understand/Running Java and reading the console.md
+// - help me understand/Runtime vs Compile errors.md
 
 void main() {
 

@@ -13,6 +13,10 @@ By the end of this session you can:
 Read this once, then go do the TODOs.
 In this session you're wiring the pieces together: a `Ball` holds a list of rules and uses them to decide who is invited.
 
+If you want a quick explanation of the “traditional” `for (int i = 0; ...)` loop shape, read:
+
+- [`help me understand/Index-based loops.md`](help%20me%20understand/Index-based%20loops.md)
+
 ### The `Ball` class = a mini test runner/coordinator
 
 In tester terms:

@@ -19,6 +19,9 @@ Tester translation:
 
 > A list of test inputs.
 
+As before with `Integer`, `String`, and `Boolean`, you define it by starting with the type of values it holds,
+followed by the name you want to give it and optionally a value to start with.
+
 In this session, we use it only so we can loop over multiple sample family names.
 
 ## Why do I need an import?
@@ -34,6 +37,9 @@ import java.util.List;
 ```
 
 That tells Java: “I want to use `List` from `java.util` in this file.”
+
+Tip (not needed for assignment): with _packages_, you can have the same name like `"List"` in different packages. 
+If you use code from someone else which also provides a `List`, the Java compiler will know which one to use!
 
 ## What does `List.of(...)` mean?
 

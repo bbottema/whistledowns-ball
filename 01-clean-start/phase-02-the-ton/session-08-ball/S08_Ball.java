@@ -27,9 +27,14 @@ class S08_Ball {
     // }
 
     // TODO 4: Implement printRegistry - print each guest's status
+    //
+    // Use this method to practice the “traditional” index-based for-loop.
+    // Why? It lets you print a nice guest number (1, 2, 3...) while looping.
     // void printRegistry(List<S08_Socialite> guests) {
-    //     for (S08_Socialite g : guests) {
-    //         System.out.println(g.name + " -> " + (mayAttend(g) ? "INVITED" : "NOT INVITED"));
+    //     for (int i = 0; i < guests.size(); i++) {
+    //         S08_Socialite g = guests.get(i);
+    //         int guestNumber = i + 1; // TODO try to reason why this is needed
+    //         System.out.println(guestNumber + ". " + g.name + " -> " + (mayAttend(g) ? "INVITED" : "NOT INVITED"));
     //     }
     // }
 }
