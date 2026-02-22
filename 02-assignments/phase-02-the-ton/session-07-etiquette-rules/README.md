@@ -13,6 +13,10 @@ By the end of this session you can:
 Read this once, then go do the TODOs.
 You are building a small "rule checklist": multiple checks that can all be run the same way.
 
+Also read:
+
+- [`help me understand/Interfaces (contract vs promise).md`](help%20me%20understand/Interfaces%20%28contract%20vs%20promise%29.md)
+
 ### An interface = "one standard shape" for a check
 
 In `S07_EtiquetteRule.java` you'll define the interface.
