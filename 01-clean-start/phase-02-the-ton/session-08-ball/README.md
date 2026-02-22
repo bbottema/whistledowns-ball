@@ -16,6 +16,7 @@ In this session you're wiring the pieces together: a `Ball` holds a list of rule
 If you want a quick explanation of the “traditional” `for (int i = 0; ...)` loop shape, read:
 
 - [`help me understand/Index-based loops.md`](help%20me%20understand/Index-based%20loops.md)
+- [`help me understand/i++ vs ++i vs i = i + 1.md`](help%20me%20understand/i%2B%2B%20vs%20%2B%2Bi%20vs%20i%20%3D%20i%20%2B%201.md)
 
 ### The `Ball` class = a mini test runner/coordinator
 

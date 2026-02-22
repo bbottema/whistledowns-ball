@@ -30,6 +30,7 @@ A lot of things come together here!
 - `int i = 0`  → start at the first position (index 0)
 - `i < guests.size()` → keep going while `i` is still inside the list (remember what a method is?)
 - `i++` → move to the next index (`0, 1, 2, 3, ...`)
+  - If `i++` looks unfamiliar, read: [`i++ vs ++i vs i = i + 1.md`](i%2B%2B%20vs%20%2B%2Bi%20vs%20i%20%3D%20i%20%2B%201.md)
 - `guests.get(i)` → get the item at position `i` (another method call, this time with an argument)
 
 ## Common patterns
